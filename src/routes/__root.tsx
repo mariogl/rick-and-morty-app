@@ -1,9 +1,8 @@
 import { createRootRoute, Outlet } from "@tanstack/react-router";
-
-import AppContainer from "../ui/components/AppContainer/AppContainer";
-import MainHeader from "../ui/components/MainHeader/MainHeader";
-import Navigation from "../ui/components/Navigation/Navigation";
-import Title from "../ui/components/Title/Title";
+import AppContainer from "@ui/components/AppContainer/AppContainer";
+import MainHeader from "@ui/components/MainHeader/MainHeader";
+import Navigation from "@ui/components/Navigation/Navigation";
+import Title from "@ui/components/Title/Title";
 
 const RootComponent = () => {
   return (
