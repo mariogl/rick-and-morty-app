@@ -1,3 +1,5 @@
+import queryClient from "@client/queryClient";
+import { QueryClientProvider } from "@tanstack/react-query";
 import {
   createMemoryHistory,
   createRouter,
@@ -16,7 +18,11 @@ describe("Character list page", () => {
   });
 
   it("should render the page's title", async () => {
-    render(<RouterProvider router={router} />);
+    render(
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>,
+    );
 
     const pageTitle = await screen.findByRole("heading", {
       name: /character list/i,

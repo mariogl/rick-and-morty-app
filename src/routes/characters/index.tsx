@@ -1,7 +1,6 @@
+import CharacterList from "@characters/components/CharacterList/CharacterList";
 import { createFileRoute } from "@tanstack/react-router";
-import CharacterList from "src/characters/components/CharacterList";
-
-import Title from "../../ui/components/Title/Title";
+import Title from "@ui/components/Title/Title";
 
 const CharacterListPage = () => {
   return (

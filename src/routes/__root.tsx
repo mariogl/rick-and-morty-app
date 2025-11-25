@@ -1,4 +1,5 @@
 import { createRootRoute, Outlet } from "@tanstack/react-router";
+import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import AppContainer from "@ui/components/AppContainer/AppContainer";
 import MainHeader from "@ui/components/MainHeader/MainHeader";
 import Navigation from "@ui/components/Navigation/Navigation";
@@ -20,6 +21,7 @@ const RootComponent = () => {
           <Outlet />
         </main>
       </AppContainer>
+      <TanStackRouterDevtools />
     </>
   );
 };
