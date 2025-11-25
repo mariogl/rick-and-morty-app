@@ -1,14 +1,17 @@
+import CharacterClient from "@characters/client/CharacterClient";
 import { useSuspenseQuery } from "@tanstack/react-query";
+import environment from "src/environment";
 
 import type { Character } from "../types";
 
 export const charactersQuery = {
   queryKey: ["characters"],
-  queryFn: () => {
-    return Promise.resolve([
-      { id: 1, name: "Rick Sanchez" },
-      { id: 2, name: "Morty Smith" },
-    ]);
+  queryFn: async () => {
+    const client = new CharacterClient(environment.apiBaseUrl);
+
+    const characters = await client.fetchCharacters();
+
+    return characters;
   },
 };
 
