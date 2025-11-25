@@ -12,7 +12,7 @@ const RootComponent = () => {
           Rick&Morty App
         </Title>
         <Navigation>
-          <Navigation.Link to="/characters">Characters list</Navigation.Link>
+          <Navigation.Link to="/characters">Character list</Navigation.Link>
         </Navigation>
       </MainHeader>
       <AppContainer>

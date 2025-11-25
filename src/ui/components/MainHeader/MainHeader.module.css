@@ -1,5 +1,5 @@
 .main-header {
-  background-color: #282c34;
+  background-color: var(--color-dark);
   border-bottom: 2px solid var(--color-primary);
 }
 

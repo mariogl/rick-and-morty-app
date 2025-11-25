@@ -10,7 +10,7 @@
 
   &:hover {
     background-color: var(--color-secondary);
-    color: var(--color-dark);
+    color: var(--color-darker);
   }
 }
 
