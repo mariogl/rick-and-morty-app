@@ -1,10 +1,17 @@
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 
+import AppContainer from "../ui/components/AppContainer/AppContainer";
+import MainHeader from "../ui/components/MainHeader/MainHeader";
+
 const RootComponent = () => {
   return (
     <>
-      <p>Rick&Morty App</p>
-      <Outlet />
+      <MainHeader>
+        <p>Rick&Morty App</p>
+      </MainHeader>
+      <AppContainer>
+        <Outlet />
+      </AppContainer>
     </>
   );
 };

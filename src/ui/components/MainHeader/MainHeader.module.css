@@ -1,0 +1,11 @@
+.main-header {
+  background-color: #282c34;
+  border-bottom: 2px solid var(--color--accent);
+}
+
+.main-header__container {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
