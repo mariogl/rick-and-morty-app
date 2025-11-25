@@ -7,7 +7,7 @@ import { render, screen } from "@testing-library/react";
 
 import { routeTree } from "../routeTree.gen";
 
-describe("Characters list page", () => {
+describe("Character list page", () => {
   const router = createRouter({
     routeTree,
     history: createMemoryHistory({
@@ -19,7 +19,7 @@ describe("Characters list page", () => {
     render(<RouterProvider router={router} />);
 
     const pageTitle = await screen.findByRole("heading", {
-      name: /characters/i,
+      name: /character list/i,
     });
 
     expect(pageTitle).toBeInTheDocument();

@@ -27,7 +27,7 @@ describe("App", () => {
     render(<RouterProvider router={router} />);
 
     const link = await screen.findByRole("link", {
-      name: /characters list/i,
+      name: /character list/i,
     });
 
     expect(link).toBeInTheDocument();
