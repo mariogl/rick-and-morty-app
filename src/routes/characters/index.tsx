@@ -5,7 +5,7 @@ import Title from "../../ui/components/Title/Title";
 const CharactersListPage = () => {
   return (
     <Title level={1} className="page-title">
-      Character list
+      Characters
     </Title>
   );
 };
