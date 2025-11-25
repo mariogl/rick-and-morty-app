@@ -1,0 +1,17 @@
+.navigation {
+  display: flex;
+  gap: 15px;
+}
+
+.navigation__link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.navigation__link--active {
+  font-weight: 500;
+  border-bottom: 2px solid var(--color-secondary);
+}
