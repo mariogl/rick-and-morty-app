@@ -1,6 +1,6 @@
 .main-header {
   background-color: #282c34;
-  border-bottom: 2px solid var(--color--accent);
+  border-bottom: 2px solid var(--color-primary);
 }
 
 .main-header__container {
