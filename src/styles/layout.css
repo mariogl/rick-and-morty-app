@@ -1,0 +1,8 @@
+.app-title {
+  color: var(--color-secondary);
+}
+
+.page-title {
+  color: var(--color-accent);
+  text-align: center;
+}

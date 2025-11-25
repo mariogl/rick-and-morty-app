@@ -4,7 +4,8 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
   --color-primary: #44d62c;
-  --color-accent: #00b5cc;
+  --color-secondary: #00b5cc;
+  --color-accent: #f0e14a;
   --color-text-primary: #fff;
   --color-dark: #0e0e1a;
 }

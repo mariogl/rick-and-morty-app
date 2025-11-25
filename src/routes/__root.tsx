@@ -9,7 +9,7 @@ const RootComponent = () => {
   return (
     <>
       <MainHeader>
-        <Title as="text" level={2} className="accent">
+        <Title as="text" level={2} className="app-title">
           Rick&Morty App
         </Title>
         <Navigation>
@@ -17,7 +17,9 @@ const RootComponent = () => {
         </Navigation>
       </MainHeader>
       <AppContainer>
-        <Outlet />
+        <main>
+          <Outlet />
+        </main>
       </AppContainer>
     </>
   );
