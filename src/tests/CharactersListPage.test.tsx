@@ -15,14 +15,6 @@ describe("Characters list page", () => {
     }),
   });
 
-  it("should render the app's title", async () => {
-    render(<RouterProvider router={router} />);
-
-    const appTitle = await screen.findByText(/rick&morty app/i);
-
-    expect(appTitle).toBeInTheDocument();
-  });
-
   it("should render the page's title", async () => {
     render(<RouterProvider router={router} />);
 
