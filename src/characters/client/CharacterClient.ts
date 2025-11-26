@@ -2,6 +2,8 @@ import type { ApiResponse } from "@characters/dto/types";
 import HttpFetchFailedCharactersError from "@characters/errors/HttpFetchFailedCharactersError";
 import type { Character } from "@characters/types";
 
+import characterApiPaths from "./characterApiPaths";
+
 class CharacterClient {
   private readonly apiBaseUrl: string;
 
@@ -11,7 +13,9 @@ class CharacterClient {
 
   async fetchCharacters(): Promise<Character[]> {
     try {
-      const response = await fetch(`${this.apiBaseUrl}/character`);
+      const response = await fetch(
+        `${this.apiBaseUrl}${characterApiPaths.characters}`,
+      );
 
       if (!response.ok) {
         throw new Error();

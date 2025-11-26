@@ -12,6 +12,9 @@ import { routeTree } from "../routeTree.gen";
 describe("App", () => {
   const router = createRouter({
     routeTree,
+    context: {
+      queryClient,
+    },
     history: createMemoryHistory({
       initialEntries: ["/"],
     }),

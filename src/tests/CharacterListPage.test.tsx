@@ -12,6 +12,9 @@ import { routeTree } from "../routeTree.gen";
 describe("Character list page", () => {
   const router = createRouter({
     routeTree,
+    context: {
+      queryClient,
+    },
     history: createMemoryHistory({
       initialEntries: ["/characters"],
     }),
