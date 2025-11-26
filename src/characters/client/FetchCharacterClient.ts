@@ -29,7 +29,7 @@ class FetchCharacterClient implements CharacterClient {
       const body = (await response.json()) as CharacterListData;
 
       return body.results.map((characterDto) =>
-        new CharacterDto(characterDto).toCharacter(),
+        CharacterDto.fromPrimitives(characterDto).toCharacter(),
       );
     } catch {
       throw new HttpFetchFailedCharactersError();
@@ -48,7 +48,7 @@ class FetchCharacterClient implements CharacterClient {
 
       const characterDto = (await response.json()) as CharacterDtoPrimitives;
 
-      return new CharacterDto(characterDto).toCharacter();
+      return CharacterDto.fromPrimitives(characterDto).toCharacter();
     } catch {
       throw new HttpFetchFailedCharactersError();
     }

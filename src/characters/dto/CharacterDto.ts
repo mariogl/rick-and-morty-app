@@ -12,7 +12,7 @@ import type { CharacterDtoPrimitives } from "./types";
 class CharacterDto {
   private readonly value: CharacterDtoPrimitives;
 
-  constructor(characterDtoPrimitives: CharacterDtoPrimitives) {
+  private constructor(characterDtoPrimitives: CharacterDtoPrimitives) {
     this.value = characterDtoPrimitives;
   }
 
