@@ -10,8 +10,8 @@ export const characterHandlers = [
   http.get(`${environment.apiBaseUrl}${characterApiPaths.characters}`, () => {
     return HttpResponse.json<ApiResponse>({
       results: [
-        CharacterDtoMotherObject.createRickDto(),
-        CharacterDtoMotherObject.createMortyDto(),
+        CharacterDtoMotherObject.createRickDtoPrimitives(),
+        CharacterDtoMotherObject.createMortyDtoPrimitives(),
       ],
     });
   }),

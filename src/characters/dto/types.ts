@@ -1,8 +1,9 @@
-export type CharacterDto = {
+export type CharacterDtoPrimitives = {
   id: number;
   name: string;
+  image: string;
 };
 
 export type ApiResponse = {
-  results: CharacterDto[];
+  results: CharacterDtoPrimitives[];
 };

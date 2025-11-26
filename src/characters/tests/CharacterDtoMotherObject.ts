@@ -1,24 +1,25 @@
-import type { CharacterDto } from "@app/characters/dto/types";
+import type { CharacterDtoPrimitives } from "@app/characters/dto/types";
 
 class CharacterDtoMotherObject {
   static lastId = 0;
 
-  static createCharacterDto(
-    overrides: Partial<CharacterDto> = {},
-  ): CharacterDto {
+  static createCharacterDtoPrimitives(
+    overrides: Partial<CharacterDtoPrimitives> = {},
+  ): CharacterDtoPrimitives {
     return {
       id: CharacterDtoMotherObject.lastId++,
       name: "John Doe",
+      image: "john.jpg",
       ...overrides,
     };
   }
 
-  static createRickDto(): CharacterDto {
-    return this.createCharacterDto({ name: "Rick Sanchez" });
+  static createRickDtoPrimitives(): CharacterDtoPrimitives {
+    return this.createCharacterDtoPrimitives({ name: "Rick Sanchez" });
   }
 
-  static createMortyDto(): CharacterDto {
-    return this.createCharacterDto({ name: "Morty Smith" });
+  static createMortyDtoPrimitives(): CharacterDtoPrimitives {
+    return this.createCharacterDtoPrimitives({ name: "Morty Smith" });
   }
 }
 
