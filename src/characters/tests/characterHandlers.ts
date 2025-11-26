@@ -1,8 +1,9 @@
-import characterApiPaths from "@characters/client/characterApiPaths";
-import { type ApiResponse } from "@characters/dto/types";
 import { http, HttpResponse } from "msw";
-import environment from "src/environment";
 
+import characterApiPaths from "@app/characters/client/characterApiPaths";
+import { type ApiResponse } from "@app/characters/dto/types";
+
+import environment from "../../environment";
 import CharacterDtoMotherObject from "./CharacterDtoMotherObject";
 
 export const characterHandlers = [

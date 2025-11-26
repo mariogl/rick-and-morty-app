@@ -1,11 +1,12 @@
-import type { CharacterClient } from "@characters/client/types";
 import type { QueryClient } from "@tanstack/react-query";
 import { createRootRouteWithContext, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
-import AppContainer from "@ui/components/AppContainer/AppContainer";
-import MainHeader from "@ui/components/MainHeader/MainHeader";
-import Navigation from "@ui/components/Navigation/Navigation";
-import Title from "@ui/components/Title/Title";
+
+import type { CharacterClient } from "@app/characters/client/types";
+import AppContainer from "@app/ui/components/AppContainer/AppContainer";
+import MainHeader from "@app/ui/components/MainHeader/MainHeader";
+import Navigation from "@app/ui/components/Navigation/Navigation";
+import Title from "@app/ui/components/Title/Title";
 
 const RootComponent = () => {
   return (

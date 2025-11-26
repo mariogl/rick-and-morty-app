@@ -27,9 +27,9 @@
     /* Path aliases */
     "baseUrl": ".",
     "paths": {
-      "@ui/*": ["src/ui/*"],
-      "@characters/*": ["src/characters/*"],
-      "@client/*": ["src/client/*"]
+      "@app/ui/*": ["src/ui/*"],
+      "@app/characters/*": ["src/characters/*"],
+      "@app/client/*": ["src/client/*"]
     }
   },
   "include": ["src"]

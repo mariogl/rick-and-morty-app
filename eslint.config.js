@@ -44,9 +44,9 @@ export default defineConfig([
             // Node built-ins
             ["^node:"],
             // Third-party packages
-            ["^@?\\w(?!@repo/)"],
-            // @repo/* packages
-            ["^@repo/"],
+            ["^@?\\w(?!@app/)"],
+            // @app/* packages
+            ["^@app/"],
             // Parent (..) and then sibling (.) imports
             ["^\\.\\.(?!/?$)", "^\\.\\./?$", "^\\."],
             // Side effects

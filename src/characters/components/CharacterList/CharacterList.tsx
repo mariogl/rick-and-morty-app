@@ -1,4 +1,4 @@
-import Grid from "@ui/components/Grid/Grid";
+import Grid from "@app/ui/components/Grid/Grid";
 
 import useCharactersQuery from "../../queries/useCharactersQuery";
 import CharacterCard from "../CharacterCard/CharacterCard";

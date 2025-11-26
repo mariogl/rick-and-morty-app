@@ -1,11 +1,12 @@
-import CharacterClientProvider from "@characters/client/CharacterClientProvider";
-import FetchCharacterClient from "@characters/client/FetchCharacterClient";
-import queryClient from "@client/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { createRouter, RouterProvider } from "@tanstack/react-router";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+
+import CharacterClientProvider from "@app/characters/client/CharacterClientProvider";
+import FetchCharacterClient from "@app/characters/client/FetchCharacterClient";
+import queryClient from "@app/client/queryClient";
 
 import environment from "./environment";
 import { routeTree } from "./routeTree.gen";

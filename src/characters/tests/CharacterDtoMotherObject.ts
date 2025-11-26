@@ -1,4 +1,4 @@
-import type { CharacterDto } from "@characters/dto/types";
+import type { CharacterDto } from "@app/characters/dto/types";
 
 class CharacterDtoMotherObject {
   static lastId = 0;

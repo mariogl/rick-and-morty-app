@@ -1,6 +1,7 @@
-import type { CharacterClient } from "@characters/client/types";
 import { render, type RenderOptions } from "@testing-library/react";
 import type { PropsWithChildren } from "react";
+
+import type { CharacterClient } from "@app/characters/client/types";
 
 import { TestProviders } from "./TestProviders";
 

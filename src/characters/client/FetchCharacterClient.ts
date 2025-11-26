@@ -1,6 +1,6 @@
-import type { ApiResponse } from "@characters/dto/types";
-import HttpFetchFailedCharactersError from "@characters/errors/HttpFetchFailedCharactersError";
-import type { Character } from "@characters/types";
+import type { ApiResponse } from "@app/characters/dto/types";
+import HttpFetchFailedCharactersError from "@app/characters/errors/HttpFetchFailedCharactersError";
+import type { Character } from "@app/characters/types";
 
 import characterApiPaths from "./characterApiPaths";
 

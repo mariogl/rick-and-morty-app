@@ -1,5 +1,5 @@
-import Card from "@ui/components/Card/Card";
-import Title from "@ui/components/Title/Title";
+import Card from "@app/ui/components/Card/Card";
+import Title from "@app/ui/components/Title/Title";
 
 import type { Character } from "../../types";
 import styles from "./CharacterCard.module.css";

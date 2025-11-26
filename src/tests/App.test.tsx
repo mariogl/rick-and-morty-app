@@ -1,13 +1,14 @@
-import queryClient from "@client/queryClient";
 import {
   createMemoryHistory,
   createRouter,
   RouterProvider,
 } from "@tanstack/react-router";
 import { screen } from "@testing-library/react";
-import renderWithProviders from "src/testUtils/renderWithProviders";
+
+import queryClient from "@app/client/queryClient";
 
 import { routeTree } from "../routeTree.gen";
+import renderWithProviders from "../testUtils/renderWithProviders";
 
 describe("App", () => {
   const router = createRouter({

@@ -1,6 +1,7 @@
-import type { CharacterClient } from "@characters/client/types";
-import useCharacterClient from "@characters/client/useCharacterClient";
 import { useSuspenseQuery } from "@tanstack/react-query";
+
+import type { CharacterClient } from "@app/characters/client/types";
+import useCharacterClient from "@app/characters/client/useCharacterClient";
 
 import type { Character } from "../types";
 

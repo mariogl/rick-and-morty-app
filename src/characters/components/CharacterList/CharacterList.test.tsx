@@ -1,6 +1,6 @@
 import { screen } from "@testing-library/react";
-import renderWithProviders from "src/testUtils/renderWithProviders";
 
+import renderWithProviders from "../../../testUtils/renderWithProviders";
 import CharacterMotherObject from "../../tests/CharacterMotherObject";
 import CharacterList from "./CharacterList";
 
