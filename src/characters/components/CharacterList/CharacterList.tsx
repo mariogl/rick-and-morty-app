@@ -8,9 +8,9 @@ const CharacterList = () => {
 
   return (
     <Grid>
-      {characters.map((character) => (
+      {characters.map((character, index) => (
         <Grid.Item key={character.id}>
-          <CharacterCard character={character} />
+          <CharacterCard character={character} position={index} />
         </Grid.Item>
       ))}
     </Grid>

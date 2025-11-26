@@ -16,9 +16,15 @@ const CharacterDetail = ({ characterId }: CharacterDetailProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.image}>
-        <img src={imageUrl} alt={name} width={300} height={300} />
+        <img
+          src={imageUrl}
+          alt={name}
+          width={300}
+          height={300}
+          fetchPriority="high"
+        />
       </div>
-      <Grid fixedColumns={2} className={styles.info}>
+      <Grid size="large" className={styles.info}>
         <Grid.Item>
           <Info label="Status">{status}</Info>
         </Grid.Item>

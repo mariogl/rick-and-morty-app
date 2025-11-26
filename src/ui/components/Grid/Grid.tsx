@@ -6,18 +6,18 @@ import GridItem from "./GridItem";
 import styles from "./Grid.module.css";
 
 interface GridProps extends ComponentProps<"ul"> {
-  fixedColumns?: number;
+  size?: "normal" | "large";
 }
 
 const Grid = ({
   className,
-  fixedColumns,
+  size = "normal",
   children,
   ...props
 }: PropsWithChildren<GridProps>) => {
   const finalClassName = classNames(
     styles.grid,
-    fixedColumns && styles["grid--fixed-columns"],
+    size === "large" && styles["grid--large"],
     className,
   );
 
