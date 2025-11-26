@@ -8,6 +8,12 @@ class CharacterMotherObject {
       id: CharacterMotherObject.lastId++,
       name: "John Doe",
       imageUrl: "john.jpg",
+      status: "Alive",
+      species: "Human",
+      type: "",
+      gender: "Male",
+      origin: "Earth",
+      location: "Earth",
       ...overrides,
     };
   }

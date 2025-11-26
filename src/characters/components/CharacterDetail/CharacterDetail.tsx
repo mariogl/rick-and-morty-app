@@ -10,7 +10,7 @@ interface CharacterDetailProps {
 
 const CharacterDetail = ({ characterId }: CharacterDetailProps) => {
   const {
-    data: { name, imageUrl },
+    data: { name, imageUrl, status, species, type, gender, origin, location },
   } = useCharacterQuery(Number(characterId));
 
   return (
@@ -20,22 +20,22 @@ const CharacterDetail = ({ characterId }: CharacterDetailProps) => {
       </div>
       <Grid fixedColumns={2} className={styles.info}>
         <Grid.Item>
-          <Info label="Status">Alive</Info>
+          <Info label="Status">{status}</Info>
         </Grid.Item>
         <Grid.Item>
-          <Info label="Species">Human</Info>
+          <Info label="Species">{species}</Info>
         </Grid.Item>
         <Grid.Item>
-          <Info label="Type">-</Info>
+          <Info label="Type">{type || "-"}</Info>
         </Grid.Item>
         <Grid.Item>
-          <Info label="Gender">Male</Info>
+          <Info label="Gender">{gender}</Info>
         </Grid.Item>
         <Grid.Item>
-          <Info label="Origin">Earth (C-137)</Info>
+          <Info label="Origin">{origin}</Info>
         </Grid.Item>
         <Grid.Item>
-          <Info label="Location">Citadel of Ricks</Info>
+          <Info label="Location">{location}</Info>
         </Grid.Item>
       </Grid>
     </div>
