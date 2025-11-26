@@ -2,6 +2,7 @@ import classNames from "classnames";
 import type { ComponentProps, PropsWithChildren } from "react";
 
 import AppContainer from "../AppContainer/AppContainer";
+
 import styles from "./MainHeader.module.css";
 
 type MainHeaderProps = ComponentProps<"header">;

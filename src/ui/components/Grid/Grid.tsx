@@ -1,8 +1,9 @@
 import classNames from "classnames";
 import type { ComponentProps, PropsWithChildren } from "react";
 
-import styles from "./Grid.module.css";
 import GridItem from "./GridItem";
+
+import styles from "./Grid.module.css";
 
 type GridProps = ComponentProps<"ul">;
 

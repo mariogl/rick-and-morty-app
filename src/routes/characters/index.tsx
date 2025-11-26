@@ -21,5 +21,4 @@ export const Route = createFileRoute("/characters/")({
       getCharactersQuery(context.characterClient),
     ),
   component: CharacterListPage,
-  pendingComponent: () => <div>Loading characters...</div>,
 });

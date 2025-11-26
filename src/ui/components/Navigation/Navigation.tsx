@@ -1,8 +1,9 @@
 import classNames from "classnames";
 import type { ComponentProps, PropsWithChildren } from "react";
 
-import styles from "./Navigation.module.css";
 import NavigationLink from "./NavigationLink";
+
+import styles from "./Navigation.module.css";
 
 type NavigationProps = ComponentProps<"nav">;
 

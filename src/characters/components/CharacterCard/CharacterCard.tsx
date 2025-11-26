@@ -2,6 +2,7 @@ import Card from "@app/ui/components/Card/Card";
 import Title from "@app/ui/components/Title/Title";
 
 import type { Character } from "../../types";
+
 import styles from "./CharacterCard.module.css";
 
 interface CharacterCardProps {

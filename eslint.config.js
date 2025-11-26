@@ -51,6 +51,8 @@ export default defineConfig([
             ["^\\.\\.(?!/?$)", "^\\.\\./?$", "^\\."],
             // Side effects
             ["^\\u0000"],
+            // Styles
+            ["^.+\\.css$"],
           ],
         },
       ],
