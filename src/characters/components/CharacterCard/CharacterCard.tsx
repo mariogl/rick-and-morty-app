@@ -9,9 +9,12 @@ interface CharacterCardProps {
   character: Character;
 }
 
-const CharacterCard = ({ character: { name } }: CharacterCardProps) => {
+const CharacterCard = ({
+  character: { name, imageUrl },
+}: CharacterCardProps) => {
   return (
     <Card>
+      <Card.Image src={imageUrl} alt={name} width={100} height={100} />
       <Card.Body>
         <Title level={2} className={styles.characterName}>
           {name}

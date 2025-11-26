@@ -1,8 +1,10 @@
 import classNames from "classnames";
 import type { ComponentProps, PropsWithChildren } from "react";
 
-import styles from "./Card.module.css";
 import CardBody from "./CardBody";
+import CardImage from "./CardImage";
+
+import styles from "./Card.module.css";
 
 type CardProps = ComponentProps<"article">;
 
@@ -21,5 +23,6 @@ const Card = ({
 };
 
 Card.Body = CardBody;
+Card.Image = CardImage;
 
 export default Card;

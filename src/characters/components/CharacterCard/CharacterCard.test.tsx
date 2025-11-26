@@ -4,11 +4,11 @@ import CharacterMotherObject from "../../tests/CharacterMotherObject";
 import CharacterCard from "./CharacterCard";
 
 describe("CharacterCard component", () => {
-  it("should render character name", () => {
-    const character = CharacterMotherObject.createCharacter({
-      name: "Rick Sanchez",
-    });
+  const character = CharacterMotherObject.createCharacter({
+    name: "Rick Sanchez",
+  });
 
+  it("should render character name", () => {
     render(<CharacterCard character={character} />);
 
     const characterName = screen.getByRole("heading", {
@@ -16,5 +16,13 @@ describe("CharacterCard component", () => {
     });
 
     expect(characterName).toBeInTheDocument();
+  });
+
+  it("should render character image", () => {
+    render(<CharacterCard character={character} />);
+
+    const characterImage = screen.getByAltText(character.name);
+
+    expect(characterImage).toBeInTheDocument();
   });
 });
