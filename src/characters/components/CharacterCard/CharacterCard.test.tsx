@@ -1,4 +1,5 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
+import { renderWithRouter } from "src/testUtils/testUtils";
 
 import CharacterMotherObject from "../../tests/CharacterMotherObject";
 import CharacterCard from "./CharacterCard";
@@ -8,10 +9,10 @@ describe("CharacterCard component", () => {
     name: "Rick Sanchez",
   });
 
-  it("should render character name", () => {
-    render(<CharacterCard character={character} />);
+  it("should render character name", async () => {
+    renderWithRouter(<CharacterCard character={character} />);
 
-    const characterName = screen.getByRole("heading", {
+    const characterName = await screen.findByRole("heading", {
       name: character.name,
     });
 

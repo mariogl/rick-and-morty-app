@@ -1,5 +1,9 @@
 import type { QueryClient } from "@tanstack/react-query";
-import { createRootRouteWithContext, Outlet } from "@tanstack/react-router";
+import {
+  createRootRouteWithContext,
+  HeadContent,
+  Outlet,
+} from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
 import type { CharacterClient } from "@app/characters/client/types";
@@ -11,6 +15,7 @@ import Title from "@app/ui/components/Title/Title";
 const RootComponent = () => {
   return (
     <>
+      <HeadContent />
       <MainHeader>
         <Title as="text" level={2} className="app-title">
           Rick&Morty App

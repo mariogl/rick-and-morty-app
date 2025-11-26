@@ -8,7 +8,7 @@ import { screen } from "@testing-library/react";
 import queryClient from "@app/client/queryClient";
 
 import { routeTree } from "../routeTree.gen";
-import renderWithProviders from "../testUtils/renderWithProviders";
+import { renderWithProviders } from "../testUtils/testUtils";
 
 describe("App", () => {
   const router = createRouter({

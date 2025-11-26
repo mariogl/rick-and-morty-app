@@ -21,4 +21,11 @@ export const Route = createFileRoute("/characters/")({
       getCharactersQuery(context.characterClient),
     ),
   component: CharacterListPage,
+  head: () => ({
+    meta: [
+      {
+        title: "Character list - Rick&Morty App",
+      },
+    ],
+  }),
 });

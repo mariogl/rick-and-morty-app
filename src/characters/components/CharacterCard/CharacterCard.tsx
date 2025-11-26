@@ -11,11 +11,15 @@ interface CharacterCardProps {
 }
 
 const CharacterCard = ({
-  character: { name, imageUrl },
+  character: { id, name, imageUrl },
 }: CharacterCardProps) => {
   return (
     <Card type="floating" className={styles.character}>
-      <Link to="/characters" aria-label={`View details of ${name}`}>
+      <Link
+        to="/characters/$id"
+        params={{ id: id.toString() }}
+        aria-label={`View details of ${name}`}
+      >
         <Card.Image
           src={imageUrl}
           alt=""

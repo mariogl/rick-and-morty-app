@@ -1,3 +1,8 @@
+import {
+  createRootRoute,
+  createRouter,
+  RouterProvider,
+} from "@tanstack/react-router";
 import { render, type RenderOptions } from "@testing-library/react";
 import type { PropsWithChildren } from "react";
 
@@ -9,7 +14,7 @@ type ProvidersOptions = RenderOptions & {
   characterClient?: CharacterClient;
 };
 
-const renderWithProviders = (
+export const renderWithProviders = (
   ui: React.ReactNode,
   options?: ProvidersOptions,
 ) => {
@@ -24,4 +29,14 @@ const renderWithProviders = (
   return render(ui, { wrapper, ...options });
 };
 
-export default renderWithProviders;
+export const renderWithRouter = (component: React.ReactNode) => {
+  const rootRoute = createRootRoute({
+    component: () => component,
+  });
+
+  const router = createRouter({
+    routeTree: rootRoute,
+  });
+
+  return render(<RouterProvider router={router} />);
+};
