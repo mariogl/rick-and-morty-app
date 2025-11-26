@@ -4,6 +4,6 @@ export type CharacterDtoPrimitives = {
   image: string;
 };
 
-export type ApiResponse = {
+export type CharacterListData = {
   results: CharacterDtoPrimitives[];
 };

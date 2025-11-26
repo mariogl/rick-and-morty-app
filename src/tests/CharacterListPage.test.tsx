@@ -5,17 +5,25 @@ import {
 } from "@tanstack/react-router";
 import { screen } from "@testing-library/react";
 
+import type { CharacterClient } from "@app/characters/client/types";
+import CharacterMotherObject from "@app/characters/tests/CharacterMotherObject";
 import queryClient from "@app/client/queryClient";
 
 import { routeTree } from "../routeTree.gen";
 import { renderWithProviders } from "../testUtils/testUtils";
 
 describe("Character list page", () => {
+  const fakeCharacterClient: CharacterClient = {
+    fetchCharacters: async () => [],
+    fetchCharacterById: async (id: number) =>
+      CharacterMotherObject.createCharacter({ id }),
+  };
+
   const router = createRouter({
     routeTree,
     context: {
       queryClient,
-      characterClient: { fetchCharacters: async () => [] },
+      characterClient: fakeCharacterClient,
     },
     history: createMemoryHistory({
       initialEntries: ["/characters"],

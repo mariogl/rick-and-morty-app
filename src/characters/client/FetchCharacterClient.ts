@@ -1,11 +1,15 @@
-import type { ApiResponse } from "@app/characters/dto/types";
+import type {
+  CharacterDtoPrimitives,
+  CharacterListData,
+} from "@app/characters/dto/types";
 import HttpFetchFailedCharactersError from "@app/characters/errors/HttpFetchFailedCharactersError";
 import type { Character } from "@app/characters/types";
 
 import CharacterDto from "../dto/CharacterDto";
 import characterApiPaths from "./characterApiPaths";
+import type { CharacterClient } from "./types";
 
-class FetchCharacterClient {
+class FetchCharacterClient implements CharacterClient {
   private readonly apiBaseUrl: string;
 
   constructor(apiBaseUrl: string) {
@@ -22,11 +26,29 @@ class FetchCharacterClient {
         throw new Error();
       }
 
-      const body = (await response.json()) as ApiResponse;
+      const body = (await response.json()) as CharacterListData;
 
       return body.results.map((characterDto) =>
         new CharacterDto(characterDto).toCharacter(),
       );
+    } catch {
+      throw new HttpFetchFailedCharactersError();
+    }
+  }
+
+  async fetchCharacterById(id: number): Promise<Character> {
+    try {
+      const response = await fetch(
+        `${this.apiBaseUrl}${characterApiPaths.character(id)}`,
+      );
+
+      if (!response.ok) {
+        throw new Error();
+      }
+
+      const characterDto = (await response.json()) as CharacterDtoPrimitives;
+
+      return new CharacterDto(characterDto).toCharacter();
     } catch {
       throw new HttpFetchFailedCharactersError();
     }
