@@ -1,11 +1,16 @@
 .detailItem {
   display: flex;
   flex-direction: column;
-  gap: 8px;
   background-color: var(--color-dark);
   border-radius: 6px;
   border-left: 4px solid var(--color-secondary);
-  padding: 16px;
+  padding: 10px 16px;
+  gap: 4px;
+
+  @media (width >= 760px) {
+    gap: 8px;
+    padding: 16px;
+  }
 }
 
 .detailItem__name {

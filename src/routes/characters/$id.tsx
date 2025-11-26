@@ -1,15 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { getCharacterQuery } from "@app/characters/queries/useCharacterQuery";
+import CharacterDetail from "@app/characters/components/CharacterDetail/CharacterDetail";
+import useCharacterQuery, {
+  getCharacterQuery,
+} from "@app/characters/queries/useCharacterQuery";
 import Title from "@app/ui/components/Title/Title";
 
 const CharacterDetailPage = () => {
   const { id } = Route.useParams();
 
+  const { data: character } = useCharacterQuery(Number(id));
+
   return (
-    <Title level={1} className="page-title">
-      Character detail ${id}
-    </Title>
+    <>
+      <Title level={1} className="page-title">
+        {character.name}
+      </Title>
+      <CharacterDetail characterId={id} />
+    </>
   );
 };
 

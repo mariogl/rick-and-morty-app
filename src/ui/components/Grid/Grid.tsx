@@ -5,14 +5,21 @@ import GridItem from "./GridItem";
 
 import styles from "./Grid.module.css";
 
-type GridProps = ComponentProps<"ul">;
+interface GridProps extends ComponentProps<"ul"> {
+  fixedColumns?: number;
+}
 
 const Grid = ({
   className,
+  fixedColumns,
   children,
   ...props
 }: PropsWithChildren<GridProps>) => {
-  const finalClassName = classNames(styles.grid, className);
+  const finalClassName = classNames(
+    styles.grid,
+    fixedColumns && styles["grid--fixed-columns"],
+    className,
+  );
 
   return (
     <ul className={finalClassName} {...props}>
