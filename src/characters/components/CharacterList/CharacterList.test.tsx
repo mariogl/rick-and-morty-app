@@ -1,6 +1,7 @@
 import { screen } from "@testing-library/react";
+import { TestProviders } from "src/testUtils/TestProviders";
 
-import { renderWithProviders } from "../../../testUtils/testUtils";
+import { renderWithRouter } from "../../../testUtils/testUtils";
 import CharacterMotherObject from "../../tests/CharacterMotherObject";
 import CharacterList from "./CharacterList";
 
@@ -11,7 +12,11 @@ describe("CharacterList component", () => {
   ];
 
   it.for(characters)("should render character name $name", async ({ name }) => {
-    renderWithProviders(<CharacterList />);
+    renderWithRouter(
+      <TestProviders>
+        <CharacterList />
+      </TestProviders>,
+    );
 
     const characterName = await screen.findByRole("heading", { name });
 
