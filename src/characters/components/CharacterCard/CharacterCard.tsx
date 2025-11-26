@@ -10,7 +10,7 @@ const CharacterCard = ({
   character: { name, imageUrl },
 }: CharacterCardProps) => {
   return (
-    <Card>
+    <Card type="floating">
       <Card.Image
         src={imageUrl}
         alt=""

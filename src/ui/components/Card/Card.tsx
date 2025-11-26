@@ -7,14 +7,21 @@ import CardTitle from "./CardTitle";
 
 import styles from "./Card.module.css";
 
-type CardProps = ComponentProps<"article">;
+interface CardProps extends ComponentProps<"article"> {
+  type?: "floating" | "flat";
+}
 
 const Card = ({
+  type = "flat",
   className,
   children,
   ...props
 }: PropsWithChildren<CardProps>) => {
-  const finalClassName = classNames(styles.card, className);
+  const finalClassName = classNames(
+    styles.card,
+    type === "floating" && styles["card--floating"],
+    className,
+  );
 
   return (
     <article className={finalClassName} {...props}>

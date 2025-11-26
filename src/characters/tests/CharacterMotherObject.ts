@@ -7,6 +7,7 @@ class CharacterMotherObject {
     return {
       id: CharacterMotherObject.lastId++,
       name: "John Doe",
+      imageUrl: "john.jpg",
       ...overrides,
     };
   }
