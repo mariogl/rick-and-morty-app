@@ -12,6 +12,14 @@ class CharacterDtoMotherObject {
       ...overrides,
     };
   }
+
+  static createRickDto(): CharacterDto {
+    return this.createCharacterDto({ name: "Rick Sanchez" });
+  }
+
+  static createMortyDto(): CharacterDto {
+    return this.createCharacterDto({ name: "Morty Smith" });
+  }
 }
 
 export default CharacterDtoMotherObject;

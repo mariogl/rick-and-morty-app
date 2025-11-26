@@ -10,6 +10,14 @@ class CharacterMotherObject {
       ...overrides,
     };
   }
+
+  static createRick(): Character {
+    return this.createCharacter({ name: "Rick Sanchez" });
+  }
+
+  static createMorty(): Character {
+    return this.createCharacter({ name: "Morty Smith" });
+  }
 }
 
 export default CharacterMotherObject;

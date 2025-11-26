@@ -7,8 +7,8 @@ import CharacterList from "./CharacterList";
 
 describe("CharacterList component", () => {
   const characters = [
-    CharacterMotherObject.createCharacter({ name: "Rick Sanchez" }),
-    CharacterMotherObject.createCharacter({ name: "Morty Smith" }),
+    CharacterMotherObject.createRick(),
+    CharacterMotherObject.createMorty(),
   ];
 
   it.for(characters)("should render character name $name", async ({ name }) => {
