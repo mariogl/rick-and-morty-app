@@ -3,6 +3,7 @@ import type { ComponentProps, PropsWithChildren } from "react";
 
 import CardBody from "./CardBody";
 import CardImage from "./CardImage";
+import CardTitle from "./CardTitle";
 
 import styles from "./Card.module.css";
 
@@ -22,7 +23,8 @@ const Card = ({
   );
 };
 
-Card.Body = CardBody;
 Card.Image = CardImage;
+Card.Title = CardTitle;
+Card.Body = CardBody;
 
 export default Card;

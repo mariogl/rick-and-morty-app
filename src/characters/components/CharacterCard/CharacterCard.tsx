@@ -1,9 +1,6 @@
 import Card from "@app/ui/components/Card/Card";
-import Title from "@app/ui/components/Title/Title";
 
 import type { Character } from "../../types";
-
-import styles from "./CharacterCard.module.css";
 
 interface CharacterCardProps {
   character: Character;
@@ -22,9 +19,7 @@ const CharacterCard = ({
         loading="lazy"
       />
       <Card.Body>
-        <Title level={2} className={styles.characterName}>
-          {name}
-        </Title>
+        <Card.Title level={2}>{name}</Card.Title>
       </Card.Body>
     </Card>
   );

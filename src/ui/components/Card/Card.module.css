@@ -13,3 +13,7 @@
   width: 100%;
   height: auto;
 }
+
+.card__title {
+  font-size: 1.3rem;
+}

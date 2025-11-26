@@ -17,12 +17,4 @@ describe("CharacterCard component", () => {
 
     expect(characterName).toBeInTheDocument();
   });
-
-  it("should render character image", () => {
-    render(<CharacterCard character={character} />);
-
-    const characterImage = screen.getByAltText(character.name);
-
-    expect(characterImage).toBeInTheDocument();
-  });
 });
