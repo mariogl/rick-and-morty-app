@@ -1,11 +1,11 @@
 import queryClient from "@client/queryClient";
-import { QueryClientProvider } from "@tanstack/react-query";
 import {
   createMemoryHistory,
   createRouter,
   RouterProvider,
 } from "@tanstack/react-router";
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
+import renderWithProviders from "src/testUtils/renderWithProviders";
 
 import { routeTree } from "../routeTree.gen";
 
@@ -14,6 +14,7 @@ describe("Character list page", () => {
     routeTree,
     context: {
       queryClient,
+      characterClient: { fetchCharacters: async () => [] },
     },
     history: createMemoryHistory({
       initialEntries: ["/characters"],
@@ -21,11 +22,7 @@ describe("Character list page", () => {
   });
 
   it("should render the page's title", async () => {
-    render(
-      <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
-      </QueryClientProvider>,
-    );
+    renderWithProviders(<RouterProvider router={router} />);
 
     const pageTitle = await screen.findByRole("heading", {
       name: /character list/i,

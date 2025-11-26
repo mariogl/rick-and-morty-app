@@ -1,22 +1,22 @@
-import CharacterClient from "@characters/client/CharacterClient";
+import type { CharacterClient } from "@characters/client/types";
+import useCharacterClient from "@characters/client/useCharacterClient";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import environment from "src/environment";
 
 import type { Character } from "../types";
 
-export const charactersQuery = {
+export const getCharactersQuery = (characterClient: CharacterClient) => ({
   queryKey: ["characters"],
   queryFn: async () => {
-    const client = new CharacterClient(environment.apiBaseUrl);
-
-    const characters = await client.fetchCharacters();
+    const characters = await characterClient.fetchCharacters();
 
     return characters;
   },
-};
+});
 
 const useCharactersQuery = () => {
-  return useSuspenseQuery<Character[]>(charactersQuery);
+  const { characterClient } = useCharacterClient();
+
+  return useSuspenseQuery<Character[]>(getCharactersQuery(characterClient));
 };
 
 export default useCharactersQuery;

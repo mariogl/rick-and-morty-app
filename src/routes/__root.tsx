@@ -1,3 +1,4 @@
+import type { CharacterClient } from "@characters/client/types";
 import type { QueryClient } from "@tanstack/react-query";
 import { createRootRouteWithContext, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
@@ -29,6 +30,7 @@ const RootComponent = () => {
 
 interface RouterContext {
   queryClient: QueryClient;
+  characterClient: CharacterClient;
 }
 
 export const Route = createRootRouteWithContext<RouterContext>()({

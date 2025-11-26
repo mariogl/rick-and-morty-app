@@ -1,6 +1,5 @@
-import queryClient from "@client/queryClient";
-import { QueryClientProvider } from "@tanstack/react-query";
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
+import renderWithProviders from "src/testUtils/renderWithProviders";
 
 import CharacterMotherObject from "../../tests/CharacterMotherObject";
 import CharacterList from "./CharacterList";
@@ -12,11 +11,7 @@ describe("CharacterList component", () => {
   ];
 
   it.for(characters)("should render character name $name", async ({ name }) => {
-    render(
-      <QueryClientProvider client={queryClient}>
-        <CharacterList />
-      </QueryClientProvider>,
-    );
+    renderWithProviders(<CharacterList />);
 
     const characterName = await screen.findByRole("heading", { name });
 

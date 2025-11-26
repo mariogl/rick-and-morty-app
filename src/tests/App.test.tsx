@@ -1,11 +1,11 @@
 import queryClient from "@client/queryClient";
-import { QueryClientProvider } from "@tanstack/react-query";
 import {
   createMemoryHistory,
   createRouter,
   RouterProvider,
 } from "@tanstack/react-router";
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
+import renderWithProviders from "src/testUtils/renderWithProviders";
 
 import { routeTree } from "../routeTree.gen";
 
@@ -14,6 +14,9 @@ describe("App", () => {
     routeTree,
     context: {
       queryClient,
+      characterClient: {
+        fetchCharacters: async () => [],
+      },
     },
     history: createMemoryHistory({
       initialEntries: ["/"],
@@ -21,11 +24,7 @@ describe("App", () => {
   });
 
   it("should render the app's title", async () => {
-    render(
-      <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
-      </QueryClientProvider>,
-    );
+    renderWithProviders(<RouterProvider router={router} />);
 
     const appTitle = await screen.findByText(/rick&morty app/i);
 
@@ -33,11 +32,7 @@ describe("App", () => {
   });
 
   it("should render a link to the characters page", async () => {
-    render(
-      <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
-      </QueryClientProvider>,
-    );
+    renderWithProviders(<RouterProvider router={router} />);
 
     const link = await screen.findByRole("link", {
       name: /character list/i,

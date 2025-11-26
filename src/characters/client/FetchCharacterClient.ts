@@ -4,7 +4,7 @@ import type { Character } from "@characters/types";
 
 import characterApiPaths from "./characterApiPaths";
 
-class CharacterClient {
+class FetchCharacterClient {
   private readonly apiBaseUrl: string;
 
   constructor(apiBaseUrl: string) {
@@ -30,4 +30,4 @@ class CharacterClient {
   }
 }
 
-export default CharacterClient;
+export default FetchCharacterClient;
