@@ -8,6 +8,7 @@ import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
 import type { CharacterClient } from "@app/characters/client/types";
 import AppContainer from "@app/ui/components/AppContainer/AppContainer";
+import MainContent from "@app/ui/components/MainContent/MainContent";
 import MainHeader from "@app/ui/components/MainHeader/MainHeader";
 import Navigation from "@app/ui/components/Navigation/Navigation";
 import Title from "@app/ui/components/Title/Title";
@@ -25,9 +26,9 @@ const RootComponent = () => {
         </Navigation>
       </MainHeader>
       <AppContainer>
-        <main>
+        <MainContent>
           <Outlet />
-        </main>
+        </MainContent>
       </AppContainer>
       <TanStackRouterDevtools />
     </>
