@@ -18,3 +18,10 @@ a {
 img {
   max-width: 100%;
 }
+
+select {
+  background: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+}
