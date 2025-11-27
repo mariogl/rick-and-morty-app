@@ -9,6 +9,7 @@ import {
 import useCharacterSort from "@app/characters/sorting/useCharacterSort";
 import Dropdown from "@app/ui/components/Dropdown/Dropdown";
 import Panel from "@app/ui/components/Panel/Panel";
+import TextBox from "@app/ui/components/TextBox/TextBox";
 
 type CharacterListControlsProps = ComponentProps<"div">;
 
@@ -26,6 +27,12 @@ const CharacterListControls = ({ className }: CharacterListControlsProps) => {
 
   return (
     <Panel className={className}>
+      <TextBox
+        label="Search"
+        id="search"
+        type="search"
+        className="controls__large-item"
+      />
       <Dropdown
         label="Sort characters by:"
         id="sort"

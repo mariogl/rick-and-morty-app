@@ -19,6 +19,7 @@ img {
   max-width: 100%;
 }
 
+input,
 select {
   background: transparent;
   border: none;
