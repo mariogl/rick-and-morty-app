@@ -4,7 +4,10 @@ import z from "zod";
 import CharacterList from "@app/characters/components/CharacterList/CharacterList";
 import CharacterListControls from "@app/characters/components/CharacterListControls/CharacterListControls";
 import { getCharactersQuery } from "@app/characters/queries/useCharactersQuery";
-import { characterSortableProperties } from "@app/characters/sorting/types";
+import {
+  characterSortableProperties,
+  sortableDirections,
+} from "@app/characters/sorting/types";
 import Title from "@app/ui/components/Title/Title";
 
 const CharacterListPage = () => {
@@ -34,5 +37,6 @@ export const Route = createFileRoute("/characters/")({
   }),
   validateSearch: z.object({
     sortBy: z.enum(characterSortableProperties).default("name"),
+    sortDirection: z.enum(sortableDirections).default("asc"),
   }),
 });

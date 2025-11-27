@@ -1,20 +1,28 @@
 import { useNavigate, useSearch } from "@tanstack/react-router";
 
-import type { CharacterSortableProperties } from "./types";
+import type { CharacterSortableProperties, SortableDirection } from "./types";
 
 const useCharacterSort = () => {
   const navigate = useNavigate({ from: "/characters" });
-  const { sortBy } = useSearch({ from: "/characters/" });
+  const { sortBy, sortDirection } = useSearch({ from: "/characters/" });
 
-  const setSortCriterion = (criterion: CharacterSortableProperties) => {
+  const setSort = (
+    criterion: CharacterSortableProperties,
+    direction: SortableDirection,
+  ) => {
     navigate({
-      search: (previousParams) => ({ ...previousParams, sortBy: criterion }),
+      search: (previousParams) => ({
+        ...previousParams,
+        sortBy: criterion,
+        sortDirection: direction,
+      }),
     });
   };
 
   return {
     sortCriterion: sortBy,
-    setSortCriterion,
+    sortDirection,
+    setSort,
   };
 };
 

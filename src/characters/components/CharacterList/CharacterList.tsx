@@ -6,10 +6,14 @@ import CharacterCard from "../CharacterCard/CharacterCard";
 
 const CharacterList = () => {
   const { data } = useCharactersQuery();
-  const { sortCriterion } = useCharacterSort();
-  const sortedCharacters = data.sort((characterA, characterB) =>
-    characterA[sortCriterion].localeCompare(characterB[sortCriterion]),
-  );
+  const { sortCriterion, sortDirection } = useCharacterSort();
+  const sortedCharacters = data.sort((characterA, characterB) => {
+    const comparison = characterA[sortCriterion].localeCompare(
+      characterB[sortCriterion],
+    );
+
+    return sortDirection === "asc" ? comparison : -comparison;
+  });
   const characters = sortedCharacters;
 
   return (

@@ -1,8 +1,10 @@
 import type { ComponentProps } from "react";
+import React from "react";
 
 import {
   type CharacterSortableProperties,
   characterSortableProperties,
+  type SortableDirection,
 } from "@app/characters/sorting/types";
 import useCharacterSort from "@app/characters/sorting/useCharacterSort";
 import Dropdown from "@app/ui/components/Dropdown/Dropdown";
@@ -11,10 +13,15 @@ import Panel from "@app/ui/components/Panel/Panel";
 type CharacterListControlsProps = ComponentProps<"div">;
 
 const CharacterListControls = ({ className }: CharacterListControlsProps) => {
-  const { sortCriterion, setSortCriterion } = useCharacterSort();
+  const { sortCriterion, sortDirection, setSort } = useCharacterSort();
 
   const changeSortCriterion = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSortCriterion(event.target.value as CharacterSortableProperties);
+    const [criterion, direction] = event.target.value.split(",") as [
+      CharacterSortableProperties,
+      SortableDirection,
+    ];
+
+    setSort(criterion, direction);
   };
 
   return (
@@ -22,13 +29,18 @@ const CharacterListControls = ({ className }: CharacterListControlsProps) => {
       <Dropdown
         label="Sort characters by:"
         id="sort"
-        value={sortCriterion}
+        value={`${sortCriterion},${sortDirection}`}
         onChange={changeSortCriterion}
       >
         {characterSortableProperties.map((property) => (
-          <Dropdown.Item key={property} value={property}>
-            {property}
-          </Dropdown.Item>
+          <React.Fragment key={property}>
+            <Dropdown.Item value={`${property},asc`}>
+              {property} (A-Z)
+            </Dropdown.Item>
+            <Dropdown.Item value={`${property},desc`}>
+              {property} (Z-A)
+            </Dropdown.Item>
+          </React.Fragment>
         ))}
       </Dropdown>
     </Panel>
