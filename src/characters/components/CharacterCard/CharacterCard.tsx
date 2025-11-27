@@ -12,7 +12,7 @@ interface CharacterCardProps {
 }
 
 const CharacterCard = ({
-  character: { id, name, imageUrl },
+  character: { id, name, gender, imageUrl },
   position,
 }: CharacterCardProps) => {
   let loading: "eager" | "lazy" = "lazy";
@@ -44,6 +44,7 @@ const CharacterCard = ({
         />
         <Card.Body>
           <Card.Title level={2}>{name}</Card.Title>
+          <span>Gender: {gender}</span>
         </Card.Body>
       </Link>
     </Card>
