@@ -43,7 +43,7 @@ const CharacterListControls = ({ className }: CharacterListControlsProps) => {
   return (
     <Panel className={className}>
       <TextBox
-        label="Search"
+        label="Search:"
         id="search"
         type="search"
         value={searchText}
