@@ -2,6 +2,7 @@ import type { QueryClient } from "@tanstack/react-query";
 import {
   createRootRouteWithContext,
   HeadContent,
+  Link,
   Outlet,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
@@ -19,7 +20,7 @@ const RootComponent = () => {
       <HeadContent />
       <MainHeader>
         <Title as="text" level={2} className="app-title">
-          Rick&Morty App
+          <Link to="/characters">Rick&Morty App</Link>
         </Title>
         <Navigation>
           <Navigation.Link to="/characters">Character list</Navigation.Link>
