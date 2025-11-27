@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import CharacterDetail from "@app/characters/components/CharacterDetail/CharacterDetail";
+import CharacterDetailSkeleton from "@app/characters/components/CharacterDetailSkeleton/CharacterDetailSkeleton";
 import useCharacterQuery, {
   getCharacterQuery,
 } from "@app/characters/queries/useCharacterQuery";
@@ -32,7 +33,7 @@ export const Route = createFileRoute("/characters/$id")({
       <Title level={1} className="page-title">
         ...
       </Title>
-      <div>Loading character data...</div>
+      <CharacterDetailSkeleton />
     </>
   ),
   head: ({ loaderData }) => ({

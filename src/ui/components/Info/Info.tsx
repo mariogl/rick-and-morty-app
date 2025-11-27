@@ -1,14 +1,22 @@
-import type { PropsWithChildren } from "react";
+import classNames from "classnames";
+import type { ComponentProps, PropsWithChildren } from "react";
 
 import styles from "./Info.module.css";
 
-interface InfoProps {
+interface InfoProps extends ComponentProps<"div"> {
   label: string;
 }
 
-const Info = ({ label, children }: PropsWithChildren<InfoProps>) => {
+const Info = ({
+  className,
+  label,
+  children,
+  ...props
+}: PropsWithChildren<InfoProps>) => {
+  const finalClassName = classNames(styles.detailItem, className);
+
   return (
-    <div className={styles.detailItem}>
+    <div className={finalClassName} {...props}>
       <div className={styles.detailItem__name}>{label}</div>
       <div className={styles.detailItem__value}>{children}</div>
     </div>
