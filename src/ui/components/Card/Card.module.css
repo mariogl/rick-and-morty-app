@@ -1,6 +1,6 @@
 .card {
-  background-color: var(--color-dark);
-  border: 2px solid #3a3f5c;
+  background-color: var(--color-darker);
+  border: 2px solid var(--color-border);
   border-radius: 8px;
   overflow: auto;
   min-height: 320px;
@@ -14,7 +14,7 @@
 .card__image {
   width: 100%;
   height: auto;
-  background-color: var(--color-dark);
+  background-color: var(--color-darker);
 }
 
 .card__title {

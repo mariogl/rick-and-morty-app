@@ -8,6 +8,8 @@
   --color-accent: #f0e14a;
   --color-text-primary: #fff;
   --color-text-secondary: #b4b8d4;
-  --color-darker: #0e0e1a;
-  --color-dark: #282c34;
+  --color-darkest: #0e0e1a;
+  --color-darker: #282c34;
+  --color-dark: #343b47;
+  --color-border: #3a3f5c;
 }

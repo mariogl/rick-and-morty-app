@@ -1,0 +1,6 @@
+.panel {
+  background-color: var(--color-darker);
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  padding: 16px;
+}
