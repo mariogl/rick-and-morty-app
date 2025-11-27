@@ -23,9 +23,10 @@ const CharacterListPage = () => {
 };
 
 export const Route = createFileRoute("/characters/")({
-  loader: ({ context }) =>
+  loaderDeps: ({ search: { search } }) => ({ search }),
+  loader: ({ context, deps: { search } }) =>
     context.queryClient.ensureQueryData(
-      getCharactersQuery(context.characterClient),
+      getCharactersQuery(context.characterClient, search),
     ),
   component: CharacterListPage,
   head: () => ({
@@ -38,5 +39,6 @@ export const Route = createFileRoute("/characters/")({
   validateSearch: z.object({
     sortBy: z.enum(characterSortableProperties).default("name"),
     sortDirection: z.enum(sortableDirections).default("asc"),
+    search: z.string().optional(),
   }),
 });

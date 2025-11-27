@@ -1,6 +1,8 @@
 import type { ComponentProps } from "react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
+import useCharacterSearch from "@app/characters/search/useCharacterSearch";
+import useDebounceSearch from "@app/characters/search/useDebounceSearch";
 import {
   type CharacterSortableProperties,
   characterSortableProperties,
@@ -15,6 +17,9 @@ type CharacterListControlsProps = ComponentProps<"div">;
 
 const CharacterListControls = ({ className }: CharacterListControlsProps) => {
   const { sortCriterion, sortDirection, setSort } = useCharacterSort();
+  const { search, setSearch } = useCharacterSearch();
+  const [searchText, setSearchText] = useState(search || "");
+  const debouncedSearch = useDebounceSearch(searchText);
 
   const changeSortCriterion = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const [criterion, direction] = event.target.value.split(",") as [
@@ -25,13 +30,23 @@ const CharacterListControls = ({ className }: CharacterListControlsProps) => {
     setSort(criterion, direction);
   };
 
+  const changeSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchText(event.target.value);
+  };
+
+  useEffect(() => {
+    setSearch(debouncedSearch);
+  }, [debouncedSearch, setSearch]);
+
   return (
     <Panel className={className}>
       <TextBox
         label="Search"
         id="search"
         type="search"
+        value={searchText}
         className="controls__large-item"
+        onChange={changeSearch}
       />
       <Dropdown
         label="Sort characters by:"

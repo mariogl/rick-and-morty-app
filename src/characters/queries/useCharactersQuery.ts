@@ -10,19 +10,22 @@ import type { Character } from "../types";
 
 export const getCharactersQuery = (
   characterClient: CharacterClient,
+  search?: string,
 ): UseSuspenseQueryOptions<Character[]> => ({
-  queryKey: ["characters"],
+  queryKey: ["characters", search],
   queryFn: async () => {
-    const characters = await characterClient.fetchCharacters();
+    const characters = await characterClient.fetchCharacters(search);
 
     return characters;
   },
 });
 
-const useCharactersQuery = () => {
+const useCharactersQuery = (search?: string) => {
   const { characterClient } = useCharacterClient();
 
-  return useSuspenseQuery<Character[]>(getCharactersQuery(characterClient));
+  return useSuspenseQuery<Character[]>(
+    getCharactersQuery(characterClient, search),
+  );
 };
 
 export default useCharactersQuery;

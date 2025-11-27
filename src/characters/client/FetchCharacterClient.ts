@@ -16,11 +16,17 @@ class FetchCharacterClient implements CharacterClient {
     this.apiBaseUrl = apiBaseUrl;
   }
 
-  async fetchCharacters(): Promise<Character[]> {
+  async fetchCharacters(name?: string): Promise<Character[]> {
     try {
+      const search = name ? `?name=${name}` : "";
+
       const response = await fetch(
-        `${this.apiBaseUrl}${characterApiPaths.characters}`,
+        `${this.apiBaseUrl}${characterApiPaths.characters}${search}`,
       );
+
+      if (search && response.status === 404) {
+        return [];
+      }
 
       if (!response.ok) {
         throw new Error();
