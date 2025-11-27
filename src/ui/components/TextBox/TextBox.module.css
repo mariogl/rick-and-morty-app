@@ -1,0 +1,14 @@
+.textbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.textbox__input {
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-border);
+  border-radius: 4px;
+  background-color: var(--color-dark);
+  padding: 13px 16px;
+  width: 100%;
+}
