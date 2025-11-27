@@ -1,11 +1,10 @@
+import useCharactersQuery from "@app/characters/queries/useCharactersQuery";
 import useCharacterSearch from "@app/characters/search/useCharacterSearch";
 import useCharacterSort from "@app/characters/sorting/useCharacterSort";
-import Grid from "@app/ui/components/Grid/Grid";
 
-import useCharactersQuery from "../../queries/useCharactersQuery";
-import CharacterCard from "../CharacterCard/CharacterCard";
+import styles from "./CharacterCounter.module.css";
 
-const CharacterList = () => {
+const CharacterCounter = () => {
   const { sortCriterion, sortDirection } = useCharacterSort();
   const { search } = useCharacterSearch();
   const { data } = useCharactersQuery(search);
@@ -20,15 +19,18 @@ const CharacterList = () => {
 
   const characters = sortedCharacters;
 
+  if (characters.length === 0) {
+    return (
+      <div className={styles.counter}>
+        <span className={styles["counter__empty-icon"]}>🛸</span>
+        <span>No characters found</span>
+      </div>
+    );
+  }
+
   return (
-    <Grid>
-      {characters.map((character, index) => (
-        <Grid.Item key={character.id}>
-          <CharacterCard character={character} position={index} />
-        </Grid.Item>
-      ))}
-    </Grid>
+    <div className={styles.counter}>Showing {characters.length} characters</div>
   );
 };
 
-export default CharacterList;
+export default CharacterCounter;

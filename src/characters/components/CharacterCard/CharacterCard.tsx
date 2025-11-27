@@ -12,7 +12,7 @@ interface CharacterCardProps {
 }
 
 const CharacterCard = ({
-  character: { id, name, gender, imageUrl },
+  character: { id, name, gender, status, imageUrl },
   position,
 }: CharacterCardProps) => {
   let loading: "eager" | "lazy" = "lazy";
@@ -42,9 +42,10 @@ const CharacterCard = ({
           loading={loading}
           fetchPriority={fetchPriority}
         />
-        <Card.Body>
+        <Card.Body className={styles.character__data}>
           <Card.Title level={2}>{name}</Card.Title>
           <span>Gender: {gender}</span>
+          <span>Status: {status}</span>
         </Card.Body>
       </Link>
     </Card>

@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import z from "zod";
 
+import CharacterCounter from "@app/characters/components/CharacterCounter/CharacterCounter";
 import CharacterList from "@app/characters/components/CharacterList/CharacterList";
 import CharacterListControls from "@app/characters/components/CharacterListControls/CharacterListControls";
 import { getCharactersQuery } from "@app/characters/queries/useCharactersQuery";
@@ -17,6 +18,7 @@ const CharacterListPage = () => {
         Character list
       </Title>
       <CharacterListControls className="controls" />
+      <CharacterCounter />
       <CharacterList />
     </>
   );
