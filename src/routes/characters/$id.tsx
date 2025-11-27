@@ -27,6 +27,14 @@ export const Route = createFileRoute("/characters/$id")({
       getCharacterQuery(context.characterClient, Number(params.id)),
     ),
   component: CharacterDetailPage,
+  pendingComponent: () => (
+    <>
+      <Title level={1} className="page-title">
+        ...
+      </Title>
+      <div>Loading character data...</div>
+    </>
+  ),
   head: ({ loaderData }) => ({
     meta: [
       {
