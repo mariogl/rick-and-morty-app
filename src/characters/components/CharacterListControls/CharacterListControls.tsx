@@ -13,6 +13,8 @@ import Dropdown from "@app/ui/components/Dropdown/Dropdown";
 import Panel from "@app/ui/components/Panel/Panel";
 import TextBox from "@app/ui/components/TextBox/TextBox";
 
+import styles from "./CharacterListControls.module.css";
+
 type CharacterListControlsProps = ComponentProps<"div">;
 
 const CharacterListControls = ({ className }: CharacterListControlsProps) => {
@@ -45,12 +47,13 @@ const CharacterListControls = ({ className }: CharacterListControlsProps) => {
         id="search"
         type="search"
         value={searchText}
-        className="controls__large-item"
+        className={`${styles.controls__item} ${styles["controls__item--large"]}`}
         onChange={changeSearch}
       />
       <Dropdown
         label="Sort characters by:"
         id="sort"
+        className={styles.controls__item}
         value={`${sortCriterion},${sortDirection}`}
         onChange={changeSortCriterion}
       >
