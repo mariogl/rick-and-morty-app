@@ -1,18 +1,8 @@
-export type CharacterDtoPrimitives = {
-  id: number;
-  name: string;
-  image: string;
-  status: string;
-  species: string;
-  type: string;
-  gender: string;
-  origin: {
-    name: string;
-  };
-  location: {
-    name: string;
-  };
-};
+import type z from "zod";
+
+import type characterDtoSchema from "./schema";
+
+export type CharacterDtoPrimitives = z.infer<typeof characterDtoSchema>;
 
 export type CharacterListData = {
   results: CharacterDtoPrimitives[];

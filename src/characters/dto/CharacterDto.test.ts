@@ -3,6 +3,7 @@ import CharacterMotherObject from "src/tests/CharacterMotherObject";
 
 import UnknownGenderCharacterError from "../errors/UnknownGenderCharacterError";
 import UnknownStatusCharacterError from "../errors/UnknownStatusCharacterError";
+import type { Gender, Status } from "../types";
 import CharacterDto from "./CharacterDto";
 
 describe("CharacterDto", () => {
@@ -21,7 +22,7 @@ describe("CharacterDto", () => {
     expect(() =>
       CharacterDto.fromPrimitives({
         ...CharacterDtoMotherObject.createRickDtoPrimitives(),
-        status: "invalid",
+        status: "invalid" as Status,
       }),
     ).toThrowError(UnknownStatusCharacterError);
   });
@@ -30,7 +31,7 @@ describe("CharacterDto", () => {
     expect(() =>
       CharacterDto.fromPrimitives({
         ...CharacterDtoMotherObject.createRickDtoPrimitives(),
-        gender: "invalid",
+        gender: "invalid" as Gender,
       }),
     ).toThrowError(UnknownGenderCharacterError);
   });

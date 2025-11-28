@@ -9,7 +9,7 @@ class CharacterDtoMotherObject {
     return {
       id: CharacterDtoMotherObject.lastId++,
       name: "John Doe",
-      image: "john.jpg",
+      image: "https://images.com/john.jpg",
       status: "Alive",
       species: "Human",
       type: "",

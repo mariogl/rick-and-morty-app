@@ -1,12 +1,9 @@
+import z from "zod";
+
 import UnknownGenderCharacterError from "../errors/UnknownGenderCharacterError";
 import UnknownStatusCharacterError from "../errors/UnknownStatusCharacterError";
-import {
-  type Character,
-  characterGenders,
-  characterStatus,
-  type Gender,
-  type Status,
-} from "../types";
+import { type Character, type Gender, type Status } from "../types";
+import characterDtoSchema from "./schema";
 import type { CharacterDtoPrimitives } from "./types";
 
 class CharacterDto {
@@ -19,15 +16,31 @@ class CharacterDto {
   static fromPrimitives(
     characterDtoPrimitives: CharacterDtoPrimitives,
   ): CharacterDto {
-    if (!characterStatus.includes(characterDtoPrimitives.status as Status)) {
-      throw new UnknownStatusCharacterError(characterDtoPrimitives.status);
-    }
+    try {
+      const validatedData = characterDtoSchema.parse(characterDtoPrimitives);
+      return new CharacterDto(validatedData);
+    } catch (error: unknown) {
+      if (!(error instanceof z.ZodError)) {
+        throw error;
+      }
 
-    if (!characterGenders.includes(characterDtoPrimitives.gender as Gender)) {
-      throw new UnknownGenderCharacterError(characterDtoPrimitives.gender);
-    }
+      const statusError = error.issues.find((issue) =>
+        issue.path.includes("status"),
+      );
+      const genderError = error.issues.find((issue) =>
+        issue.path.includes("gender"),
+      );
 
-    return new CharacterDto(characterDtoPrimitives);
+      if (statusError) {
+        throw new UnknownStatusCharacterError(characterDtoPrimitives.status);
+      }
+
+      if (genderError) {
+        throw new UnknownGenderCharacterError(characterDtoPrimitives.gender);
+      }
+
+      throw error;
+    }
   }
 
   toCharacter(): Character {

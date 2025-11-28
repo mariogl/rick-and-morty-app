@@ -7,7 +7,7 @@ class CharacterMotherObject {
     return {
       id: CharacterMotherObject.lastId++,
       name: "John Doe",
-      imageUrl: "john.jpg",
+      imageUrl: "https://images.com/john.jpg",
       status: "Alive",
       species: "Human",
       type: "",
