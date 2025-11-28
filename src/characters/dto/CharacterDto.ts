@@ -1,8 +1,10 @@
 import z from "zod";
 
+import type { Character } from "@app/character/domain/Character";
+import { type Gender, type Status } from "@app/character/domain/types";
+
 import UnknownGenderCharacterError from "../errors/UnknownGenderCharacterError";
 import UnknownStatusCharacterError from "../errors/UnknownStatusCharacterError";
-import { type Character, type Gender, type Status } from "../types";
 import characterDtoSchema from "./schema";
 import type { CharacterDtoPrimitives } from "./types";
 

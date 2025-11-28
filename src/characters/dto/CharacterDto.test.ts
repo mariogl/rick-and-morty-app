@@ -1,9 +1,10 @@
 import CharacterDtoMotherObject from "src/tests/CharacterDtoMotherObject";
 import CharacterMotherObject from "src/tests/CharacterMotherObject";
 
+import type { Gender, Status } from "@app/character/domain/types";
+
 import UnknownGenderCharacterError from "../errors/UnknownGenderCharacterError";
 import UnknownStatusCharacterError from "../errors/UnknownStatusCharacterError";
-import type { Gender, Status } from "../types";
 import CharacterDto from "./CharacterDto";
 
 describe("CharacterDto", () => {

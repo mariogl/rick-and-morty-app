@@ -3,11 +3,9 @@ import {
   type UseSuspenseQueryOptions,
 } from "@tanstack/react-query";
 
+import type { Character } from "@app/character/domain/Character";
 import type { CharacterClient } from "@app/characters/client/types";
 import useCharacterClient from "@app/characters/client/useCharacterClient";
-
-import type { Character } from "../types";
-
 export const getCharactersQuery = (
   characterClient: CharacterClient,
   search?: string,

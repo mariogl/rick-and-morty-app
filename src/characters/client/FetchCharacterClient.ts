@@ -1,9 +1,9 @@
+import type { Character } from "@app/character/domain/Character";
 import type {
   CharacterDtoPrimitives,
   CharacterListData,
 } from "@app/characters/dto/types";
 import HttpFetchFailedCharactersError from "@app/characters/errors/HttpFetchFailedCharactersError";
-import type { Character } from "@app/characters/types";
 
 import CharacterDto from "../dto/CharacterDto";
 import characterApiPaths from "./characterApiPaths";

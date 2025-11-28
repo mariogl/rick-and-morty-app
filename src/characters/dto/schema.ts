@@ -1,6 +1,6 @@
 import z from "zod";
 
-import { characterGenders, characterStatus } from "../types";
+import { characterGenders, characterStatus } from "@app/character/domain/types";
 
 const characterDtoSchema = z.object({
   id: z.number(),
