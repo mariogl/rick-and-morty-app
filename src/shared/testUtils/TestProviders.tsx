@@ -3,8 +3,8 @@ import type { PropsWithChildren } from "react";
 
 import FetchCharacterClient from "@app/character/data/FetchCharacterClient";
 import type { CharacterClient } from "@app/character/domain/CharacterClient";
-import queryClient from "@app/client/queryClient";
 import environment from "@app/shared/config/environment";
+import queryClient from "@app/shared/presentation/client/queryClient";
 
 interface TestProvidersProps {
   characterClient?: CharacterClient;

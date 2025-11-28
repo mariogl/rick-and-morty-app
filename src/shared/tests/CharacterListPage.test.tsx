@@ -6,11 +6,11 @@ import {
 import { screen } from "@testing-library/react";
 
 import type { CharacterClient } from "@app/character/domain/CharacterClient";
-import queryClient from "@app/client/queryClient";
+import queryClient from "@app/shared/presentation/client/queryClient";
+import { routeTree } from "@app/shared/presentation/router/routeTree.gen";
 import { renderWithProviders } from "@app/shared/testUtils/testUtils";
 
 import CharacterMotherObject from "../../character/tests/domain/CharacterMotherObject";
-import { routeTree } from "../../routeTree.gen";
 
 describe("Character list page", () => {
   const fakeCharacterClient: CharacterClient = {

@@ -4,9 +4,9 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import FetchCharacterClient from "@app/character/data/FetchCharacterClient";
-import queryClient from "@app/client/queryClient";
+import queryClient from "@app/shared/presentation/client/queryClient";
+import { routeTree } from "@app/shared/presentation/router/routeTree.gen";
 
-import { routeTree } from "./routeTree.gen";
 import environment from "./shared/config/environment";
 
 import "@app/shared/presentation/styles/index.css";

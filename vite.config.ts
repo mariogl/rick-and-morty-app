@@ -11,6 +11,8 @@ export default defineConfig({
     tanstackRouter({
       target: "react",
       autoCodeSplitting: true,
+      generatedRouteTree: "src/shared/presentation/router/routeTree.gen.ts",
+      routesDirectory: "src/shared/presentation/routes",
     }),
     react(),
   ],

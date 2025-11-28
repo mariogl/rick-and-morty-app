@@ -6,12 +6,11 @@ import {
 import { screen } from "@testing-library/dom";
 
 import FetchCharacterClient from "@app/character/data/FetchCharacterClient";
-import queryClient from "@app/client/queryClient";
+import CharacterMotherObject from "@app/character/tests/domain/CharacterMotherObject";
+import environment from "@app/shared/config/environment";
+import queryClient from "@app/shared/presentation/client/queryClient";
+import { routeTree } from "@app/shared/presentation/router/routeTree.gen";
 import { renderWithProviders } from "@app/shared/testUtils/testUtils";
-
-import CharacterMotherObject from "../../character/tests/domain/CharacterMotherObject";
-import { routeTree } from "../../routeTree.gen";
-import environment from "../config/environment";
 
 describe("Character detail page", () => {
   const router = createRouter({
