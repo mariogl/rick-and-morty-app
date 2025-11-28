@@ -9,7 +9,7 @@ import queryClient from "@app/client/queryClient";
 import { routeTree } from "./routeTree.gen";
 import environment from "./shared/config/environment";
 
-import "./styles/index.css";
+import "@app/shared/presentation/styles/index.css";
 
 const characterClient = new FetchCharacterClient(environment.apiBaseUrl);
 
