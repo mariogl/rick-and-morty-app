@@ -1,23 +1,9 @@
-import useCharactersQuery from "@app/characters/queries/useCharactersQuery";
-import useCharacterSearch from "@app/characters/search/useCharacterSearch";
-import useCharacterSort from "@app/characters/sorting/useCharacterSort";
+import useCharacters from "../CharacterList/useCharacters";
 
 import styles from "./CharacterCounter.module.css";
 
 const CharacterCounter = () => {
-  const { sortCriterion, sortDirection } = useCharacterSort();
-  const { search } = useCharacterSearch();
-  const { data } = useCharactersQuery(search);
-
-  const sortedCharacters = data.sort((characterA, characterB) => {
-    const comparison = characterA[sortCriterion].localeCompare(
-      characterB[sortCriterion],
-    );
-
-    return sortDirection === "asc" ? comparison : -comparison;
-  });
-
-  const characters = sortedCharacters;
+  const characters = useCharacters();
 
   if (characters.length === 0) {
     return (

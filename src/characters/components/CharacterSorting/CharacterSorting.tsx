@@ -4,7 +4,7 @@ import {
   type CharacterSortableProperties,
   characterSortableProperties,
   type SortableDirection,
-} from "@app/characters/sorting/types";
+} from "@app/character/domain/types";
 import useCharacterSort from "@app/characters/sorting/useCharacterSort";
 import Dropdown from "@app/ui/components/Dropdown/Dropdown";
 

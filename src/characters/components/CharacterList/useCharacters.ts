@@ -7,18 +7,9 @@ import useCharacterSort from "../../sorting/useCharacterSort";
 const useCharacters = (): Character[] => {
   const { sortCriterion, sortDirection } = useCharacterSort();
   const { search } = useCharacterSearch();
-  const { data } = useCharactersQuery(search);
+  const { data } = useCharactersQuery({ search, sortCriterion, sortDirection });
 
-  const sortCharactersAlphabetically = (characters: Character[]): Character[] =>
-    characters.sort((characterA, characterB) => {
-      const comparison = characterA[sortCriterion].localeCompare(
-        characterB[sortCriterion],
-      );
-
-      return sortDirection === "asc" ? comparison : -comparison;
-    });
-
-  return sortCharactersAlphabetically(data);
+  return data;
 };
 
 export default useCharacters;
