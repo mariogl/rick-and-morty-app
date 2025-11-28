@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import type { ComponentProps, PropsWithChildren } from "react";
+import type { ComponentProps } from "react";
 
 import CardBody from "./CardBody";
 import CardImage from "./CardImage";
@@ -11,12 +11,7 @@ interface CardProps extends ComponentProps<"article"> {
   type?: "floating" | "flat";
 }
 
-const Card = ({
-  type = "flat",
-  className,
-  children,
-  ...props
-}: PropsWithChildren<CardProps>) => {
+const Card = ({ type = "flat", className, children, ...props }: CardProps) => {
   const finalClassName = classNames(
     styles.card,
     type === "floating" && styles["card--floating"],

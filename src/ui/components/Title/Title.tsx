@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import type { ComponentProps, ElementType, PropsWithChildren } from "react";
+import type { ComponentProps, ElementType } from "react";
 
 import styles from "./Title.module.css";
 
@@ -14,7 +14,7 @@ const Title = ({
   className,
   children,
   ...props
-}: PropsWithChildren<TitleProps>) => {
+}: TitleProps) => {
   const finalClassName = classNames(
     styles.title,
     styles[`title--level${level}`],

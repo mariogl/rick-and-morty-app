@@ -1,15 +1,11 @@
 import classNames from "classnames";
-import type { ComponentProps, PropsWithChildren } from "react";
+import type { ComponentProps } from "react";
 
 import styles from "./Panel.module.css";
 
 type PanelProps = ComponentProps<"div">;
 
-const Panel = ({
-  className,
-  children,
-  ...props
-}: PropsWithChildren<PanelProps>) => {
+const Panel = ({ className, children, ...props }: PanelProps) => {
   const finalClassName = classNames(styles.panel, className);
 
   return (

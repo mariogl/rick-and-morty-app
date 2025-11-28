@@ -1,15 +1,11 @@
 import classNames from "classnames";
-import type { ComponentProps, PropsWithChildren } from "react";
+import type { ComponentProps } from "react";
 
 import styles from "./Grid.module.css";
 
 type GridItemProps = ComponentProps<"li">;
 
-const GridItem = ({
-  className,
-  children,
-  ...props
-}: PropsWithChildren<GridItemProps>) => {
+const GridItem = ({ className, children, ...props }: GridItemProps) => {
   const finalClassName = classNames(styles.grid__item, className);
 
   return (

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import type { ComponentProps, PropsWithChildren } from "react";
+import type { ComponentProps } from "react";
 
 import AppContainer from "../AppContainer/AppContainer";
 
@@ -7,11 +7,7 @@ import styles from "./MainHeader.module.css";
 
 type MainHeaderProps = ComponentProps<"header">;
 
-const MainHeader = ({
-  className,
-  children,
-  ...props
-}: PropsWithChildren<MainHeaderProps>) => {
+const MainHeader = ({ className, children, ...props }: MainHeaderProps) => {
   const finalClassName = classNames(styles["main-header"], className);
 
   return (

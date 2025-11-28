@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import type { ComponentProps, PropsWithChildren } from "react";
+import type { ComponentProps } from "react";
 
 import DropdownItem from "./DropdownItem";
 
@@ -16,7 +16,7 @@ const Dropdown = ({
   className,
   children,
   ...props
-}: PropsWithChildren<DropdownProps>) => {
+}: DropdownProps) => {
   const finalClassName = classNames(styles.dropdown, className);
 
   return (

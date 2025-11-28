@@ -1,15 +1,11 @@
 import classNames from "classnames";
-import type { ComponentProps, PropsWithChildren } from "react";
+import type { ComponentProps } from "react";
 
 import styles from "./Card.module.css";
 
 type CardBodyProps = ComponentProps<"div">;
 
-const CardBody = ({
-  className,
-  children,
-  ...props
-}: PropsWithChildren<CardBodyProps>) => {
+const CardBody = ({ className, children, ...props }: CardBodyProps) => {
   const finalClassName = classNames(styles.card__body, className);
 
   return (

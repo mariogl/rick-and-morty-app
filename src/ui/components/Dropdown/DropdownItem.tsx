@@ -1,11 +1,8 @@
-import type { ComponentProps, PropsWithChildren } from "react";
+import type { ComponentProps } from "react";
 
 type DropdownItemProps = ComponentProps<"option">;
 
-const DropdownItem = ({
-  children,
-  ...props
-}: PropsWithChildren<DropdownItemProps>) => {
+const DropdownItem = ({ children, ...props }: DropdownItemProps) => {
   return <option {...props}>{children}</option>;
 };
 

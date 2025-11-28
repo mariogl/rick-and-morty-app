@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import classNames from "classnames";
-import type { ComponentProps, PropsWithChildren } from "react";
+import type { ComponentProps } from "react";
 
 import styles from "./Navigation.module.css";
 
@@ -13,7 +13,7 @@ const NavigationLink = ({
   className,
   children,
   ...props
-}: PropsWithChildren<NavigationLinkProps>) => {
+}: NavigationLinkProps) => {
   const finalClassName = classNames(styles.navigation__link, className);
 
   return (

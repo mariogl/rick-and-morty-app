@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import type { ComponentProps, PropsWithChildren } from "react";
+import type { ComponentProps } from "react";
 
 import GridItem from "./GridItem";
 
@@ -14,7 +14,7 @@ const Grid = ({
   size = "normal",
   children,
   ...props
-}: PropsWithChildren<GridProps>) => {
+}: GridProps) => {
   const finalClassName = classNames(
     styles.grid,
     size === "large" && styles["grid--large"],
