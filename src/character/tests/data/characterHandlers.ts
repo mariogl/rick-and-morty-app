@@ -3,7 +3,7 @@ import { http, HttpResponse } from "msw";
 import characterApiPaths from "@app/character/data/characterApiPaths";
 import type { CharacterDtoPrimitives } from "@app/character/data/dto/types";
 import { type CharacterListData } from "@app/character/data/dto/types";
-import environment from "@app/environment";
+import environment from "@app/shared/config/environment";
 
 import CharacterDtoMotherObject from "./CharacterDtoMotherObject";
 

@@ -6,8 +6,8 @@ import { createRoot } from "react-dom/client";
 import FetchCharacterClient from "@app/character/data/FetchCharacterClient";
 import queryClient from "@app/client/queryClient";
 
-import environment from "./environment";
 import { routeTree } from "./routeTree.gen";
+import environment from "./shared/config/environment";
 
 import "./styles/index.css";
 

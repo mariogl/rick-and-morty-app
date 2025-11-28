@@ -3,7 +3,7 @@ import GetCharacterDetailUseCase from "@app/character/application/GetCharacterDe
 import GetCharactersUseCase from "@app/character/application/GetCharactersUseCase";
 import FetchCharacterClient from "@app/character/data/FetchCharacterClient";
 
-import environment from "./environment";
+import environment from "./shared/config/environment";
 
 class CompositionRoot {
   private getCharactersUseCase: GetCharactersUseCase;

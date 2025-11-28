@@ -10,8 +10,8 @@ import queryClient from "@app/client/queryClient";
 import { renderWithProviders } from "@app/shared/testUtils/testUtils";
 
 import CharacterMotherObject from "../../character/tests/domain/CharacterMotherObject";
-import environment from "../../environment";
 import { routeTree } from "../../routeTree.gen";
+import environment from "../config/environment";
 
 describe("Character detail page", () => {
   const router = createRouter({
