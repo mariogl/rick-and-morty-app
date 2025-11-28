@@ -3,8 +3,8 @@ import { createRouter, RouterProvider } from "@tanstack/react-router";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
+import FetchCharacterClient from "@app/character/data/FetchCharacterClient";
 import CharacterClientProvider from "@app/characters/client/CharacterClientProvider";
-import FetchCharacterClient from "@app/characters/client/FetchCharacterClient";
 import queryClient from "@app/client/queryClient";
 
 import environment from "./environment";

@@ -1,8 +1,8 @@
 import { QueryClientProvider } from "@tanstack/react-query";
 import type { PropsWithChildren } from "react";
 
+import FetchCharacterClient from "@app/character/data/FetchCharacterClient";
 import CharacterClientProvider from "@app/characters/client/CharacterClientProvider";
-import FetchCharacterClient from "@app/characters/client/FetchCharacterClient";
 import type { CharacterClient } from "@app/characters/client/types";
 import queryClient from "@app/client/queryClient";
 

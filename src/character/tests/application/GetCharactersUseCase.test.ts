@@ -1,7 +1,7 @@
 import CharacterSorter from "@app/character/application/CharacterSorter/CharacterSorter";
 import GetCharactersUseCase from "@app/character/application/GetCharactersUseCase";
 import type { CharacterClient } from "@app/character/domain/CharacterClient";
-import CharacterMotherObject from "@app/tests/CharacterMotherObject";
+import CharacterMotherObject from "@app/character/tests/domain/CharacterMotherObject";
 
 describe("GetCharactersUseCase", () => {
   const characterClient: Pick<CharacterClient, "fetchCharacters"> = {

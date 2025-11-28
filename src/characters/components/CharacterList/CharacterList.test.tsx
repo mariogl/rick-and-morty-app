@@ -7,7 +7,7 @@ import {
 } from "@tanstack/react-router";
 import { render, screen } from "@testing-library/react";
 
-import CharacterMotherObject from "../../../tests/CharacterMotherObject";
+import CharacterMotherObject from "../../../character/tests/domain/CharacterMotherObject";
 import { TestProviders } from "../../../testUtils/TestProviders";
 import CharacterList from "./CharacterList";
 

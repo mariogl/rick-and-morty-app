@@ -5,13 +5,13 @@ import {
 } from "@tanstack/react-router";
 import { screen } from "@testing-library/dom";
 
-import FetchCharacterClient from "@app/characters/client/FetchCharacterClient";
+import FetchCharacterClient from "@app/character/data/FetchCharacterClient";
 import queryClient from "@app/client/queryClient";
 
+import CharacterMotherObject from "../../character/tests/domain/CharacterMotherObject";
 import environment from "../../environment";
 import { routeTree } from "../../routeTree.gen";
 import { renderWithProviders } from "../../testUtils/testUtils";
-import CharacterMotherObject from "../CharacterMotherObject";
 
 describe("Character detail page", () => {
   const router = createRouter({

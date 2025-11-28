@@ -8,9 +8,9 @@ import { screen } from "@testing-library/react";
 import type { CharacterClient } from "@app/characters/client/types";
 import queryClient from "@app/client/queryClient";
 
+import CharacterMotherObject from "../../character/tests/domain/CharacterMotherObject";
 import { routeTree } from "../../routeTree.gen";
 import { renderWithProviders } from "../../testUtils/testUtils";
-import CharacterMotherObject from "../CharacterMotherObject";
 
 describe("Character list page", () => {
   const fakeCharacterClient: CharacterClient = {

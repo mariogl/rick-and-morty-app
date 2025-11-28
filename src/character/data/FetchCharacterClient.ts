@@ -6,8 +6,8 @@ import type {
 import HttpFetchFailedCharactersError from "@app/character/data/errors/HttpFetchFailedCharactersError";
 import type { Character } from "@app/character/domain/Character";
 
+import type { CharacterClient } from "../../characters/client/types";
 import characterApiPaths from "./characterApiPaths";
-import type { CharacterClient } from "./types";
 
 class FetchCharacterClient implements CharacterClient {
   private readonly apiBaseUrl: string;

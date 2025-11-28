@@ -1,6 +1,6 @@
 import { screen } from "@testing-library/react";
 
-import CharacterMotherObject from "../../../tests/CharacterMotherObject";
+import CharacterMotherObject from "../../../character/tests/domain/CharacterMotherObject";
 import { renderWithRouter } from "../../../testUtils/testUtils";
 import CharacterCard from "./CharacterCard";
 

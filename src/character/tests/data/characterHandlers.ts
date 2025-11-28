@@ -1,10 +1,10 @@
 import { http, HttpResponse } from "msw";
 
+import characterApiPaths from "@app/character/data/characterApiPaths";
 import type { CharacterDtoPrimitives } from "@app/character/data/dto/types";
 import { type CharacterListData } from "@app/character/data/dto/types";
-import characterApiPaths from "@app/characters/client/characterApiPaths";
+import environment from "@app/environment";
 
-import environment from "../environment";
 import CharacterDtoMotherObject from "./CharacterDtoMotherObject";
 
 export const characterHandlers = [

@@ -1,11 +1,10 @@
-import CharacterDtoMotherObject from "src/tests/CharacterDtoMotherObject";
-import CharacterMotherObject from "src/tests/CharacterMotherObject";
-
 import UnknownGenderCharacterError from "@app/character/domain/errors/UnknownGenderCharacterError";
 import UnknownStatusCharacterError from "@app/character/domain/errors/UnknownStatusCharacterError";
 import type { Gender, Status } from "@app/character/domain/types";
+import CharacterMotherObject from "@app/character/tests/domain/CharacterMotherObject";
 
 import CharacterDto from "../../data/dto/CharacterDto";
+import CharacterDtoMotherObject from "./CharacterDtoMotherObject";
 
 describe("CharacterDto", () => {
   it("should convert the DTO to a character", () => {
