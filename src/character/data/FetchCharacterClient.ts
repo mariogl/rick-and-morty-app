@@ -5,8 +5,8 @@ import type {
 } from "@app/character/data/dto/types";
 import HttpFetchFailedCharactersError from "@app/character/data/errors/HttpFetchFailedCharactersError";
 import type { Character } from "@app/character/domain/Character";
+import type { CharacterClient } from "@app/character/domain/CharacterClient";
 
-import type { CharacterClient } from "../../characters/client/types";
 import characterApiPaths from "./characterApiPaths";
 
 class FetchCharacterClient implements CharacterClient {

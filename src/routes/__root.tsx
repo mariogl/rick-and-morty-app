@@ -6,7 +6,7 @@ import {
   Outlet,
 } from "@tanstack/react-router";
 
-import type { CharacterClient } from "@app/characters/client/types";
+import type { CharacterClient } from "@app/character/domain/CharacterClient";
 import AppContainer from "@app/ui/components/AppContainer/AppContainer";
 import MainContent from "@app/ui/components/MainContent/MainContent";
 import MainHeader from "@app/ui/components/MainHeader/MainHeader";

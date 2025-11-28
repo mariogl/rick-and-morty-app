@@ -4,7 +4,6 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import FetchCharacterClient from "@app/character/data/FetchCharacterClient";
-import CharacterClientProvider from "@app/characters/client/CharacterClientProvider";
 import queryClient from "@app/client/queryClient";
 
 import environment from "./environment";
@@ -31,10 +30,8 @@ declare module "@tanstack/react-router" {
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <CharacterClientProvider characterClient={characterClient}>
-      <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
-      </QueryClientProvider>
-    </CharacterClientProvider>
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </StrictMode>,
 );

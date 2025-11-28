@@ -5,7 +5,7 @@ import {
 } from "@tanstack/react-router";
 import { screen } from "@testing-library/react";
 
-import type { CharacterClient } from "@app/characters/client/types";
+import type { CharacterClient } from "@app/character/domain/CharacterClient";
 import queryClient from "@app/client/queryClient";
 import { renderWithProviders } from "@app/shared/testUtils/testUtils";
 

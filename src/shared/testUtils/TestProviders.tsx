@@ -2,8 +2,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import type { PropsWithChildren } from "react";
 
 import FetchCharacterClient from "@app/character/data/FetchCharacterClient";
-import CharacterClientProvider from "@app/characters/client/CharacterClientProvider";
-import type { CharacterClient } from "@app/characters/client/types";
+import type { CharacterClient } from "@app/character/domain/CharacterClient";
 import queryClient from "@app/client/queryClient";
 import environment from "@app/environment";
 
@@ -20,8 +19,6 @@ export const TestProviders = ({
   }
 
   return (
-    <CharacterClientProvider characterClient={characterClient}>
-      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-    </CharacterClientProvider>
+    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   );
 };

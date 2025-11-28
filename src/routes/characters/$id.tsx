@@ -1,10 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-import CharacterDetail from "@app/characters/components/CharacterDetail/CharacterDetail";
-import CharacterDetailSkeleton from "@app/characters/components/CharacterDetailSkeleton/CharacterDetailSkeleton";
 import useCharacterQuery, {
   getCharacterQuery,
-} from "@app/characters/queries/useCharacterQuery";
+} from "@app/character/presentation/queries/useCharacterQuery";
+import CharacterDetail from "@app/characters/components/CharacterDetail/CharacterDetail";
+import CharacterDetailSkeleton from "@app/characters/components/CharacterDetailSkeleton/CharacterDetailSkeleton";
+import { compositionRoot } from "@app/CompositionRoot";
 import Title from "@app/ui/components/Title/Title";
 
 const CharacterDetailPage = () => {
@@ -48,7 +49,11 @@ const PendingComponent = () => (
 export const Route = createFileRoute("/characters/$id")({
   loader: ({ context, params }) =>
     context.queryClient.ensureQueryData(
-      getCharacterQuery(context.characterClient, Number(params.id)),
+      getCharacterQuery({
+        getCharacterDetailUseCase:
+          compositionRoot.getGetCharacterDetailUseCase(),
+        characterId: Number(params.id),
+      }),
     ),
   component: CharacterDetailPage,
   pendingComponent: PendingComponent,
