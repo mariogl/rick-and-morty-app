@@ -1,0 +1,12 @@
+.button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+
+  svg {
+    display: block;
+  }
+}

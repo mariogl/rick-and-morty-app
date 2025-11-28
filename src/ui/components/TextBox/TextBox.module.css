@@ -5,6 +5,7 @@
 }
 
 .textbox__input {
+  font: inherit;
   color: var(--color-text-primary);
   border: 2px solid var(--color-border);
   border-radius: 4px;
