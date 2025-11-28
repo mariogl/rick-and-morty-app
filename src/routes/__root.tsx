@@ -41,6 +41,21 @@ interface RouterContext {
   characterClient: CharacterClient;
 }
 
+const PageNotFound = () => {
+  return (
+    <>
+      <Title level={1} className="page-title">
+        404 - Page Not Found
+      </Title>
+      <p>The page you are looking for does not exist.</p>
+      <p>
+        Go back to the <Link to="/characters">character list</Link>.
+      </p>
+    </>
+  );
+};
+
 export const Route = createRootRouteWithContext<RouterContext>()({
   component: RootComponent,
+  notFoundComponent: PageNotFound,
 });
