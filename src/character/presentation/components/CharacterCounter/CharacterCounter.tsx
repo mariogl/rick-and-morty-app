@@ -1,4 +1,4 @@
-import useCharacters from "../../hooks/useCharacters";
+import useCharacters from "@app/character/presentation/hooks/useCharacters";
 
 import styles from "./CharacterCounter.module.css";
 

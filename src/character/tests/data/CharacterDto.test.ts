@@ -1,9 +1,9 @@
+import CharacterDto from "@app/character/data/dto/CharacterDto";
 import UnknownGenderCharacterError from "@app/character/domain/errors/UnknownGenderCharacterError";
 import UnknownStatusCharacterError from "@app/character/domain/errors/UnknownStatusCharacterError";
 import type { Gender, Status } from "@app/character/domain/types";
 import CharacterMotherObject from "@app/character/tests/domain/CharacterMotherObject";
 
-import CharacterDto from "../../data/dto/CharacterDto";
 import CharacterDtoMotherObject from "./CharacterDtoMotherObject";
 
 describe("CharacterDto", () => {

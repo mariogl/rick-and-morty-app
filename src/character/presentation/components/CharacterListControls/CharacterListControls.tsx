@@ -1,7 +1,6 @@
+import CharacterSearch from "@app/character/presentation/components/CharacterSearch/CharacterSearch";
+import CharacterSorting from "@app/character/presentation/components/CharacterSorting/CharacterSorting";
 import Panel from "@app/shared/presentation/components/Panel/Panel";
-
-import CharacterSearch from "../CharacterSearch/CharacterSearch";
-import CharacterSorting from "../CharacterSorting/CharacterSorting";
 
 import styles from "./CharacterListControls.module.css";
 

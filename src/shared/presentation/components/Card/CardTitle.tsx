@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import type { ComponentProps } from "react";
 
-import Title from "../Title/Title";
+import Title from "@app/shared/presentation/components/Title/Title";
 
 import styles from "./Card.module.css";
 

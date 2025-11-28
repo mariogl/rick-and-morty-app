@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import type { ComponentProps } from "react";
 
-import AppContainer from "../AppContainer/AppContainer";
+import AppContainer from "@app/shared/presentation/components/AppContainer/AppContainer";
 
 import styles from "./MainHeader.module.css";
 

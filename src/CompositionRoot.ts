@@ -2,8 +2,7 @@ import CharacterSorter from "@app/character/application/CharacterSorter/Characte
 import GetCharacterDetailUseCase from "@app/character/application/GetCharacterDetailUseCase";
 import GetCharactersUseCase from "@app/character/application/GetCharactersUseCase";
 import FetchCharacterClient from "@app/character/data/FetchCharacterClient";
-
-import environment from "./shared/config/environment";
+import environment from "@app/shared/config/environment";
 
 class CompositionRoot {
   private getCharactersUseCase: GetCharactersUseCase;

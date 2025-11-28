@@ -1,7 +1,6 @@
+import CharacterCard from "@app/character/presentation/components/CharacterCard/CharacterCard";
 import useCharacters from "@app/character/presentation/hooks/useCharacters";
 import Grid from "@app/shared/presentation/components/Grid/Grid";
-
-import CharacterCard from "../CharacterCard/CharacterCard";
 
 const CharacterList = () => {
   const characters = useCharacters();
