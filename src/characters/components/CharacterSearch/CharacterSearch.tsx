@@ -1,9 +1,13 @@
+import classNames from "classnames";
 import { type ComponentProps, useEffect, useState } from "react";
 
 import useCharacterSearch from "@app/characters/search/useCharacterSearch";
 import useDebounceSearch from "@app/characters/search/useDebounceSearch";
+import Button from "@app/ui/components/Button/Button";
+import ClearIcon from "@app/ui/components/Icon/ClearIcon";
 import TextBox from "@app/ui/components/TextBox/TextBox";
 
+import styles from "./CharacterSearch.module.css";
 type CharacterSearchProps = ComponentProps<"div">;
 
 const CharacterSearch = ({ className }: CharacterSearchProps) => {
@@ -19,15 +23,28 @@ const CharacterSearch = ({ className }: CharacterSearchProps) => {
     setSearch(debouncedSearch);
   }, [debouncedSearch, setSearch]);
 
+  const resetSearch = () => {
+    setSearchText("");
+    setSearch("");
+  };
+
+  const finalClassName = classNames(styles.search, className);
+
   return (
-    <TextBox
-      label="Search:"
-      id="search"
-      type="search"
-      className={className}
-      value={searchText}
-      onChange={changeSearch}
-    />
+    <div className={finalClassName}>
+      <TextBox
+        label="Search:"
+        id="search"
+        type="search"
+        value={searchText}
+        onChange={changeSearch}
+      />
+      {searchText !== "" && (
+        <Button className={styles.search__button} onClick={resetSearch}>
+          <ClearIcon label="clear search" />
+        </Button>
+      )}
+    </div>
   );
 };
 
