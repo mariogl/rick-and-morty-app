@@ -5,11 +5,11 @@ import {
   characterSortableProperties,
   sortableDirections,
 } from "@app/character/domain/types";
+import { getCharactersQuery } from "@app/character/presentation/queries/useCharactersQuery";
 import CharacterCounter from "@app/characters/components/CharacterCounter/CharacterCounter";
 import CharacterList from "@app/characters/components/CharacterList/CharacterList";
 import CharacterListControls from "@app/characters/components/CharacterListControls/CharacterListControls";
 import CharacterListSkeleton from "@app/characters/components/CharacterListSkeleton/CharacterListSkeleton";
-import { getCharactersQuery } from "@app/characters/queries/useCharactersQuery";
 import { compositionRoot } from "@app/CompositionRoot";
 import Title from "@app/ui/components/Title/Title";
 
