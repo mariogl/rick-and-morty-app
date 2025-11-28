@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
+import CharacterDetail from "@app/character/presentation/components/CharacterDetail/CharacterDetail";
+import CharacterDetailSkeleton from "@app/character/presentation/components/CharacterDetailSkeleton/CharacterDetailSkeleton";
 import useCharacterQuery, {
   getCharacterQuery,
 } from "@app/character/presentation/queries/useCharacterQuery";
-import CharacterDetail from "@app/characters/components/CharacterDetail/CharacterDetail";
-import CharacterDetailSkeleton from "@app/characters/components/CharacterDetailSkeleton/CharacterDetailSkeleton";
 import { compositionRoot } from "@app/CompositionRoot";
 import Title from "@app/shared/presentation/components/Title/Title";
 

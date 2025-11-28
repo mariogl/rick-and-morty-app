@@ -9,7 +9,7 @@ import { render, screen } from "@testing-library/react";
 
 import { TestProviders } from "@app/shared/testUtils/TestProviders";
 
-import CharacterMotherObject from "../../../character/tests/domain/CharacterMotherObject";
+import CharacterMotherObject from "../../../tests/domain/CharacterMotherObject";
 import CharacterList from "./CharacterList";
 
 describe("CharacterList component", () => {

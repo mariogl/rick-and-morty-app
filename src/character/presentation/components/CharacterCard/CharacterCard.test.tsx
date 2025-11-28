@@ -2,7 +2,7 @@ import { screen } from "@testing-library/react";
 
 import { renderWithRouter } from "@app/shared/testUtils/testUtils";
 
-import CharacterMotherObject from "../../../character/tests/domain/CharacterMotherObject";
+import CharacterMotherObject from "../../../tests/domain/CharacterMotherObject";
 import CharacterCard from "./CharacterCard";
 
 describe("CharacterCard component", () => {
