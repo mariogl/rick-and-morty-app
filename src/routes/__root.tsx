@@ -5,7 +5,6 @@ import {
   Link,
   Outlet,
 } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
 import type { CharacterClient } from "@app/characters/client/types";
 import AppContainer from "@app/ui/components/AppContainer/AppContainer";
@@ -31,7 +30,6 @@ const RootComponent = () => {
           <Outlet />
         </MainContent>
       </AppContainer>
-      <TanStackRouterDevtools />
     </>
   );
 };
