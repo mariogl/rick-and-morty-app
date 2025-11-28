@@ -1,4 +1,4 @@
-import useCharacters from "@app/characters/components/CharacterList/useCharacters";
+import useCharacters from "@app/character/presentation/hooks/useCharacters";
 import Grid from "@app/ui/components/Grid/Grid";
 
 import CharacterCard from "../CharacterCard/CharacterCard";

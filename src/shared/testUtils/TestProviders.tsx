@@ -5,8 +5,7 @@ import FetchCharacterClient from "@app/character/data/FetchCharacterClient";
 import CharacterClientProvider from "@app/characters/client/CharacterClientProvider";
 import type { CharacterClient } from "@app/characters/client/types";
 import queryClient from "@app/client/queryClient";
-
-import environment from "../environment";
+import environment from "@app/environment";
 
 interface TestProvidersProps {
   characterClient?: CharacterClient;

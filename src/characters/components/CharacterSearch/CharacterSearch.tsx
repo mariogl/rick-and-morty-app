@@ -1,8 +1,8 @@
 import classNames from "classnames";
 import { useEffect, useState } from "react";
 
-import useCharacterSearch from "@app/characters/search/useCharacterSearch";
-import useDebounceSearch from "@app/characters/search/useDebounceSearch";
+import useCharacterSearch from "@app/character/presentation/hooks/useCharacterSearch";
+import useDebounceSearch from "@app/character/presentation/hooks/useDebounceSearch";
 import Button from "@app/ui/components/Button/Button";
 import ClearIcon from "@app/ui/components/Icon/ClearIcon";
 import TextBox from "@app/ui/components/TextBox/TextBox";

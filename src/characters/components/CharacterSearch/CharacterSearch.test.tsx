@@ -8,7 +8,8 @@ import {
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { TestProviders } from "../../../testUtils/TestProviders";
+import { TestProviders } from "@app/shared/testUtils/TestProviders";
+
 import CharacterSearch from "./CharacterSearch";
 
 const user = userEvent.setup();

@@ -1,8 +1,8 @@
 import type { Character } from "@app/character/domain/Character";
+import useCharactersQuery from "@app/character/presentation/queries/useCharactersQuery";
 
-import useCharactersQuery from "../../../character/presentation/queries/useCharactersQuery";
-import useCharacterSearch from "../../search/useCharacterSearch";
-import useCharacterSort from "../../sorting/useCharacterSort";
+import useCharacterSearch from "./useCharacterSearch";
+import useCharacterSort from "./useCharacterSort";
 
 const useCharacters = (): Character[] => {
   const { sortCriterion, sortDirection } = useCharacterSort();
