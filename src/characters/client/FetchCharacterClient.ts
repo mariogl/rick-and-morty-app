@@ -1,11 +1,11 @@
-import type { Character } from "@app/character/domain/Character";
+import CharacterDto from "@app/character/data/dto/CharacterDto";
 import type {
   CharacterDtoPrimitives,
   CharacterListData,
-} from "@app/characters/dto/types";
-import HttpFetchFailedCharactersError from "@app/characters/errors/HttpFetchFailedCharactersError";
+} from "@app/character/data/dto/types";
+import HttpFetchFailedCharactersError from "@app/character/data/errors/HttpFetchFailedCharactersError";
+import type { Character } from "@app/character/domain/Character";
 
-import CharacterDto from "../dto/CharacterDto";
 import characterApiPaths from "./characterApiPaths";
 import type { CharacterClient } from "./types";
 

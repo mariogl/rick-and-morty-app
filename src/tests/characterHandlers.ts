@@ -1,8 +1,8 @@
 import { http, HttpResponse } from "msw";
 
+import type { CharacterDtoPrimitives } from "@app/character/data/dto/types";
+import { type CharacterListData } from "@app/character/data/dto/types";
 import characterApiPaths from "@app/characters/client/characterApiPaths";
-import type { CharacterDtoPrimitives } from "@app/characters/dto/types";
-import { type CharacterListData } from "@app/characters/dto/types";
 
 import environment from "../environment";
 import CharacterDtoMotherObject from "./CharacterDtoMotherObject";
