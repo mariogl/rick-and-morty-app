@@ -7,11 +7,11 @@ import {
 } from "@tanstack/react-router";
 
 import type { CharacterClient } from "@app/character/domain/CharacterClient";
-import AppContainer from "@app/ui/components/AppContainer/AppContainer";
-import MainContent from "@app/ui/components/MainContent/MainContent";
-import MainHeader from "@app/ui/components/MainHeader/MainHeader";
-import Navigation from "@app/ui/components/Navigation/Navigation";
-import Title from "@app/ui/components/Title/Title";
+import AppContainer from "@app/shared/presentation/components/AppContainer/AppContainer";
+import MainContent from "@app/shared/presentation/components/MainContent/MainContent";
+import MainHeader from "@app/shared/presentation/components/MainHeader/MainHeader";
+import Navigation from "@app/shared/presentation/components/Navigation/Navigation";
+import Title from "@app/shared/presentation/components/Title/Title";
 
 const RootComponent = () => {
   return (

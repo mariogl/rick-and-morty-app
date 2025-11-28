@@ -11,7 +11,7 @@ import CharacterList from "@app/characters/components/CharacterList/CharacterLis
 import CharacterListControls from "@app/characters/components/CharacterListControls/CharacterListControls";
 import CharacterListSkeleton from "@app/characters/components/CharacterListSkeleton/CharacterListSkeleton";
 import { compositionRoot } from "@app/CompositionRoot";
-import Title from "@app/ui/components/Title/Title";
+import Title from "@app/shared/presentation/components/Title/Title";
 
 const CharacterListPageHeader = () => {
   return (

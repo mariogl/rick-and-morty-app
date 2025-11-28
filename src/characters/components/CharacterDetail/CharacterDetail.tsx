@@ -1,5 +1,5 @@
-import Grid from "@app/ui/components/Grid/Grid";
-import Info from "@app/ui/components/Info/Info";
+import Grid from "@app/shared/presentation/components/Grid/Grid";
+import Info from "@app/shared/presentation/components/Info/Info";
 
 import useCharacterDetail from "./useCharacterDetail";
 

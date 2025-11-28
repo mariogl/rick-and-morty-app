@@ -6,7 +6,7 @@ import useCharacterQuery, {
 import CharacterDetail from "@app/characters/components/CharacterDetail/CharacterDetail";
 import CharacterDetailSkeleton from "@app/characters/components/CharacterDetailSkeleton/CharacterDetailSkeleton";
 import { compositionRoot } from "@app/CompositionRoot";
-import Title from "@app/ui/components/Title/Title";
+import Title from "@app/shared/presentation/components/Title/Title";
 
 const CharacterDetailPage = () => {
   const { id } = Route.useParams();

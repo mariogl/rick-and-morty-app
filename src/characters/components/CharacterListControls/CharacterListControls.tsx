@@ -1,4 +1,4 @@
-import Panel from "@app/ui/components/Panel/Panel";
+import Panel from "@app/shared/presentation/components/Panel/Panel";
 
 import CharacterSearch from "../CharacterSearch/CharacterSearch";
 import CharacterSorting from "../CharacterSorting/CharacterSorting";

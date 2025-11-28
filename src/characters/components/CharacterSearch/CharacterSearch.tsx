@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 
 import useCharacterSearch from "@app/character/presentation/hooks/useCharacterSearch";
 import useDebounceSearch from "@app/character/presentation/hooks/useDebounceSearch";
-import Button from "@app/ui/components/Button/Button";
-import ClearIcon from "@app/ui/components/Icon/ClearIcon";
-import TextBox from "@app/ui/components/TextBox/TextBox";
+import Button from "@app/shared/presentation/components/Button/Button";
+import ClearIcon from "@app/shared/presentation/components/Icon/ClearIcon";
+import TextBox from "@app/shared/presentation/components/TextBox/TextBox";
 
 import styles from "./CharacterSearch.module.css";
 interface CharacterSearchProps {

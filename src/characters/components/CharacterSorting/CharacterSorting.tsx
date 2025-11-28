@@ -6,7 +6,7 @@ import {
   type SortableDirection,
 } from "@app/character/domain/types";
 import useCharacterSort from "@app/character/presentation/hooks/useCharacterSort";
-import Dropdown from "@app/ui/components/Dropdown/Dropdown";
+import Dropdown from "@app/shared/presentation/components/Dropdown/Dropdown";
 
 interface CharacterSortingProps {
   className?: string;

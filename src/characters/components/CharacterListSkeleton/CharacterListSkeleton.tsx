@@ -1,5 +1,5 @@
-import Card from "@app/ui/components/Card/Card";
-import Grid from "@app/ui/components/Grid/Grid";
+import Card from "@app/shared/presentation/components/Card/Card";
+import Grid from "@app/shared/presentation/components/Grid/Grid";
 
 import styles from "./CharacterListSkeleton.module.css";
 

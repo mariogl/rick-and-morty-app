@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 
 import type { Character } from "@app/character/domain/Character";
-import Card from "@app/ui/components/Card/Card";
+import Card from "@app/shared/presentation/components/Card/Card";
 
 import styles from "./CharacterCard.module.css";
 
