@@ -13,6 +13,10 @@
   );
   background-size: 200% 100%;
   animation: loading 1.5s infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation-duration: 20s;
+  }
 }
 
 .skeleton__image {
@@ -33,6 +37,10 @@
   top: -70px;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (prefers-reduced-motion: reduce) {
+    animation-duration: 20s;
+  }
 }
 
 @keyframes loading {
