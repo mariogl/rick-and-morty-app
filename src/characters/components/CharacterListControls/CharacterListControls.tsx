@@ -6,7 +6,7 @@ import CharacterSorting from "../CharacterSorting/CharacterSorting";
 import styles from "./CharacterListControls.module.css";
 
 interface CharacterListControlsProps {
-  className: string;
+  className?: string;
 }
 
 const CharacterListControls = ({ className }: CharacterListControlsProps) => {

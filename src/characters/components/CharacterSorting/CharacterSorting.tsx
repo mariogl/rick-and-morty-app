@@ -9,7 +9,7 @@ import useCharacterSort from "@app/characters/sorting/useCharacterSort";
 import Dropdown from "@app/ui/components/Dropdown/Dropdown";
 
 interface CharacterSortingProps {
-  className: string;
+  className?: string;
 }
 
 const CharacterSorting = ({ className }: CharacterSortingProps) => {

@@ -9,7 +9,7 @@ import TextBox from "@app/ui/components/TextBox/TextBox";
 
 import styles from "./CharacterSearch.module.css";
 interface CharacterSearchProps {
-  className: string;
+  className?: string;
 }
 
 const CharacterSearch = ({ className }: CharacterSearchProps) => {

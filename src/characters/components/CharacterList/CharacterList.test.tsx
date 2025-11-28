@@ -6,9 +6,9 @@ import {
   RouterProvider,
 } from "@tanstack/react-router";
 import { render, screen } from "@testing-library/react";
-import { TestProviders } from "src/testUtils/TestProviders";
 
-import CharacterMotherObject from "../../tests/CharacterMotherObject";
+import CharacterMotherObject from "../../../tests/CharacterMotherObject";
+import { TestProviders } from "../../../testUtils/TestProviders";
 import CharacterList from "./CharacterList";
 
 describe("CharacterList component", () => {

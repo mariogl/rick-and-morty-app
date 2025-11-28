@@ -6,11 +6,11 @@ import {
 import { screen } from "@testing-library/react";
 
 import type { CharacterClient } from "@app/characters/client/types";
-import CharacterMotherObject from "@app/characters/tests/CharacterMotherObject";
 import queryClient from "@app/client/queryClient";
 
-import { routeTree } from "../routeTree.gen";
-import { renderWithProviders } from "../testUtils/testUtils";
+import { routeTree } from "../../routeTree.gen";
+import { renderWithProviders } from "../../testUtils/testUtils";
+import CharacterMotherObject from "../CharacterMotherObject";
 
 describe("App", () => {
   const fakeCharacterClient: CharacterClient = {

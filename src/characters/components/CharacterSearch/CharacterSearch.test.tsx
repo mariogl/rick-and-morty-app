@@ -7,8 +7,8 @@ import {
 } from "@tanstack/react-router";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { TestProviders } from "src/testUtils/TestProviders";
 
+import { TestProviders } from "../../../testUtils/TestProviders";
 import CharacterSearch from "./CharacterSearch";
 
 const user = userEvent.setup();

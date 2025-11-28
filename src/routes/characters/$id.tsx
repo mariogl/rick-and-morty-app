@@ -17,7 +17,7 @@ const CharacterDetailPage = () => {
       <Title level={1} className="page-title">
         {character.name}
       </Title>
-      <CharacterDetail characterId={id} />
+      <CharacterDetail characterId={Number(id)} />
     </>
   );
 };

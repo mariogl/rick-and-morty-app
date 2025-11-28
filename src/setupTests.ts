@@ -1,6 +1,6 @@
 import { setupServer } from "msw/node";
 
-import { characterHandlers } from "@app/characters/tests/characterHandlers";
+import { characterHandlers } from "./tests/characterHandlers";
 
 import "@testing-library/jest-dom/vitest";
 

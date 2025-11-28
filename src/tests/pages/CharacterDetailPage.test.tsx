@@ -4,14 +4,14 @@ import {
   RouterProvider,
 } from "@tanstack/react-router";
 import { screen } from "@testing-library/dom";
-import environment from "src/environment";
-import { renderWithProviders } from "src/testUtils/testUtils";
 
 import FetchCharacterClient from "@app/characters/client/FetchCharacterClient";
-import CharacterMotherObject from "@app/characters/tests/CharacterMotherObject";
 import queryClient from "@app/client/queryClient";
 
-import { routeTree } from "../routeTree.gen";
+import environment from "../../environment";
+import { routeTree } from "../../routeTree.gen";
+import { renderWithProviders } from "../../testUtils/testUtils";
+import CharacterMotherObject from "../CharacterMotherObject";
 
 describe("Character detail page", () => {
   const router = createRouter({
