@@ -58,4 +58,5 @@ const PageNotFound = () => {
 export const Route = createRootRouteWithContext<RouterContext>()({
   component: RootComponent,
   notFoundComponent: PageNotFound,
+  pendingMs: 500,
 });

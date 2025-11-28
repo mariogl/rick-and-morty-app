@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import z from "zod";
 
 import CharacterCounter from "@app/characters/components/CharacterCounter/CharacterCounter";
@@ -32,6 +32,20 @@ const CharacterListPage = () => {
   );
 };
 
+const ErrorComponent = () => {
+  return (
+    <div>
+      <Title level={1} className="page-title">
+        Oops! Something went wrong.
+      </Title>
+      <p>
+        An unexpected error has occurred. Please try again later or go back to
+        the <Link to="/characters">character list</Link>.
+      </p>
+    </div>
+  );
+};
+
 export const Route = createFileRoute("/characters/")({
   loaderDeps: ({ search: { search } }) => ({ search }),
   loader: ({ context, deps: { search } }) =>
@@ -50,7 +64,7 @@ export const Route = createFileRoute("/characters/")({
       <CharacterListSkeleton />
     </>
   ),
-  pendingMs: 500,
+  errorComponent: ErrorComponent,
   head: () => ({
     meta: [
       {

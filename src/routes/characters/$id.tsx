@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 import CharacterDetail from "@app/characters/components/CharacterDetail/CharacterDetail";
 import CharacterDetailSkeleton from "@app/characters/components/CharacterDetailSkeleton/CharacterDetailSkeleton";
@@ -22,20 +22,37 @@ const CharacterDetailPage = () => {
   );
 };
 
+const ErrorComponent = () => {
+  return (
+    <div>
+      <Title level={1} className="page-title">
+        Oops! Something went wrong.
+      </Title>
+      <p>
+        An unexpected error has occurred. Please try again later or go back to
+        the <Link to="/characters">character list</Link>.
+      </p>
+    </div>
+  );
+};
+
+const PendingComponent = () => (
+  <>
+    <Title level={1} className="page-title">
+      ...
+    </Title>
+    <CharacterDetailSkeleton />
+  </>
+);
+
 export const Route = createFileRoute("/characters/$id")({
   loader: ({ context, params }) =>
     context.queryClient.ensureQueryData(
       getCharacterQuery(context.characterClient, Number(params.id)),
     ),
   component: CharacterDetailPage,
-  pendingComponent: () => (
-    <>
-      <Title level={1} className="page-title">
-        ...
-      </Title>
-      <CharacterDetailSkeleton />
-    </>
-  ),
+  pendingComponent: PendingComponent,
+  errorComponent: ErrorComponent,
   head: ({ loaderData }) => ({
     meta: [
       {

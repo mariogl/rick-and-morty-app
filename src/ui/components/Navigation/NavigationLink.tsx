@@ -20,7 +20,7 @@ const NavigationLink = ({
     <Link
       to={to}
       className={finalClassName}
-      activeOptions={{ exact: true }}
+      activeOptions={{ exact: true, includeSearch: false }}
       activeProps={{
         className: styles["navigation__link--active"],
       }}
