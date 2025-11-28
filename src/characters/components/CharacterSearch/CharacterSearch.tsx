@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { type ComponentProps, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import useCharacterSearch from "@app/characters/search/useCharacterSearch";
 import useDebounceSearch from "@app/characters/search/useDebounceSearch";
@@ -8,7 +8,9 @@ import ClearIcon from "@app/ui/components/Icon/ClearIcon";
 import TextBox from "@app/ui/components/TextBox/TextBox";
 
 import styles from "./CharacterSearch.module.css";
-type CharacterSearchProps = ComponentProps<"div">;
+interface CharacterSearchProps {
+  className: string;
+}
 
 const CharacterSearch = ({ className }: CharacterSearchProps) => {
   const { search, setSearch } = useCharacterSearch();

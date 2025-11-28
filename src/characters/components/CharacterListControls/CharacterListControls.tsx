@@ -1,5 +1,3 @@
-import type { ComponentProps } from "react";
-
 import Panel from "@app/ui/components/Panel/Panel";
 
 import CharacterSearch from "../CharacterSearch/CharacterSearch";
@@ -7,7 +5,9 @@ import CharacterSorting from "../CharacterSorting/CharacterSorting";
 
 import styles from "./CharacterListControls.module.css";
 
-type CharacterListControlsProps = ComponentProps<"div">;
+interface CharacterListControlsProps {
+  className: string;
+}
 
 const CharacterListControls = ({ className }: CharacterListControlsProps) => {
   return (
