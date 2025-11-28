@@ -1,17 +1,17 @@
-import useCharacterQuery from "@app/characters/queries/useCharacterQuery";
 import Grid from "@app/ui/components/Grid/Grid";
 import Info from "@app/ui/components/Info/Info";
+
+import useCharacterDetail from "./useCharacterDetail";
 
 import styles from "./CharacterDetail.module.css";
 
 interface CharacterDetailProps {
-  characterId: string;
+  characterId: number;
 }
 
 const CharacterDetail = ({ characterId }: CharacterDetailProps) => {
-  const {
-    data: { name, imageUrl, status, species, type, gender, origin, location },
-  } = useCharacterQuery(Number(characterId));
+  const { name, imageUrl, status, species, type, gender, origin, location } =
+    useCharacterDetail(characterId);
 
   return (
     <div className={styles.container}>

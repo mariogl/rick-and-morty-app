@@ -1,24 +1,10 @@
-import useCharacterSearch from "@app/characters/search/useCharacterSearch";
-import useCharacterSort from "@app/characters/sorting/useCharacterSort";
+import useCharacters from "@app/characters/components/CharacterList/useCharacters";
 import Grid from "@app/ui/components/Grid/Grid";
 
-import useCharactersQuery from "../../queries/useCharactersQuery";
 import CharacterCard from "../CharacterCard/CharacterCard";
 
 const CharacterList = () => {
-  const { sortCriterion, sortDirection } = useCharacterSort();
-  const { search } = useCharacterSearch();
-  const { data } = useCharactersQuery(search);
-
-  const sortedCharacters = data.sort((characterA, characterB) => {
-    const comparison = characterA[sortCriterion].localeCompare(
-      characterB[sortCriterion],
-    );
-
-    return sortDirection === "asc" ? comparison : -comparison;
-  });
-
-  const characters = sortedCharacters;
+  const characters = useCharacters();
 
   return (
     <Grid>
