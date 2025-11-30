@@ -2,6 +2,28 @@
 
 A small front-end application for exploring Rick and Morty characters, built with React, TypeScript and Vite, and following Clean Architecture principles. This project demonstrates frontend patterns including dependency injection, comprehensive testing strategies, and accessibility-first design.
 
+## Contents
+
+- [Live Demo](#live-demo)
+- [Getting started](#getting-started)
+- [Tech stack](#tech-stack)
+- [Features](#features)
+- [Architecture](#architecture)
+- [Components](#components)
+- [Design patterns and decisions](#design-patterns-and-decisions)
+- [Notable trade-offs and intentional overabstractions](#notable-trade-offs-and-intentional-overabstractions)
+- [Testing](#testing)
+- [Accessibility](#accessibility)
+- [CI](#ci)
+- [Future refactors](#future-refactors-and-features)
+- [Conventions](#conventions)
+
+## Live Demo
+
+**[View Live Application](https://anotherrickandmortyapp.netlify.app/)**
+
+The application is deployed on **Netlify** with automatic deployments from the main branch.
+
 ## Getting started
 
 ### Prerequisites
