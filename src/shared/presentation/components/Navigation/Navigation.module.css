@@ -1,19 +1,19 @@
 .navigation {
   display: flex;
   gap: 15px;
-}
 
-.navigation__link {
-  text-decoration: none;
-  font-weight: 500;
-  padding: 8px 12px;
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
 
-  &:hover {
-    background-color: var(--color-secondary);
-    color: var(--color-darkest);
+    &:hover {
+      background-color: var(--color-secondary);
+      color: var(--color-darkest);
+    }
+
+    &[aria-current="page"] {
+      border-bottom: 2px solid var(--color-secondary);
+    }
   }
-}
-
-.navigation__link--active {
-  border-bottom: 2px solid var(--color-secondary);
 }

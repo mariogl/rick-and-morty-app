@@ -22,7 +22,12 @@ const RootComponent = () => {
           <Link to="/characters">Rick&Morty App</Link>
         </Title>
         <Navigation>
-          <Navigation.Link to="/characters">Character list</Navigation.Link>
+          <Link
+            to="/characters"
+            activeOptions={{ exact: true, includeSearch: false }}
+          >
+            Character list
+          </Link>
         </Navigation>
       </MainHeader>
       <AppContainer>
