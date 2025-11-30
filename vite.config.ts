@@ -22,4 +22,7 @@ export default defineConfig({
     setupFiles: ["src/setupTests.ts"],
     include: ["./src/**/*.test.{ts,tsx}"],
   },
+  preview: {
+    port: 4173,
+  },
 });

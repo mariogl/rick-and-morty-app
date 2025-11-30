@@ -1,6 +1,8 @@
 /// <reference types="node" />
 import { defineConfig, devices } from "@playwright/test";
 
+const port = process.env.CI ? 4173 : 5173;
+
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -26,7 +28,7 @@ export default defineConfig({
   reporter: "html",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    baseURL: "http://localhost:5173",
+    baseURL: `http://localhost:${port}`,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
@@ -41,8 +43,8 @@ export default defineConfig({
   ],
 
   webServer: {
-    command: "npm run dev",
-    url: "http://localhost:5173",
+    command: process.env.CI ? "npm run preview" : "npm run dev",
+    url: `http://localhost:${port}`,
     reuseExistingServer: !process.env.CI,
   },
 });
