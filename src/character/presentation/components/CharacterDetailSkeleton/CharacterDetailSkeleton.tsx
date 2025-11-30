@@ -5,9 +5,13 @@ import styles from "./CharacterDetailSkeleton.module.css";
 
 const CharacterDetailSkeleton = () => {
   return (
-    <div className={styles.skeleton}>
-      <div className={styles.skeleton__image}></div>
-      <Grid size="large" className={styles.skeleton__info}>
+    <div
+      className={styles.skeleton}
+      aria-label="Loading character details"
+      aria-busy="true"
+    >
+      <div className={styles.skeleton__image} aria-hidden="true"></div>
+      <Grid size="large" className={styles.skeleton__info} aria-hidden="true">
         <Grid.Item>
           <Info className={styles.skeleton__item} label="&nbsp;">
             &nbsp;

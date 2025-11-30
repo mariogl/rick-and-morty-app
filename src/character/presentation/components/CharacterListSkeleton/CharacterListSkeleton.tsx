@@ -15,7 +15,13 @@ const CharacterListSkeleton = () => {
     ),
   );
 
-  return <Grid className={styles.skeleton}>{skeletonItems}</Grid>;
+  return (
+    <div aria-label="Loading characters list" aria-busy="true">
+      <Grid className={styles.skeleton} aria-hidden="true">
+        {skeletonItems}
+      </Grid>
+    </div>
+  );
 };
 
 export default CharacterListSkeleton;
