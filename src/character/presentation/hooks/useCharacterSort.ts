@@ -3,7 +3,7 @@ import { useNavigate, useSearch } from "@tanstack/react-router";
 import type {
   CharacterSortableProperties,
   SortableDirection,
-} from "@app/character/domain/types";
+} from "@app/character/domain/Character";
 
 const useCharacterSort = () => {
   const navigate = useNavigate({ from: "/characters" });

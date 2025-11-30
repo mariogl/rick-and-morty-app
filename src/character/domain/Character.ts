@@ -1,4 +1,5 @@
-import type { Gender, Status } from "./types";
+import type { Gender } from "./Gender";
+import type { Status } from "./Status";
 
 export type Character = {
   id: number;
@@ -11,3 +12,16 @@ export type Character = {
   origin: string;
   location: string;
 };
+
+export type CharacterSortableProperties = keyof Pick<
+  Character,
+  "name" | "gender" | "status"
+>;
+export const characterSortableProperties: CharacterSortableProperties[] = [
+  "name",
+  "gender",
+  "status",
+];
+
+export type SortableDirection = "asc" | "desc";
+export const sortableDirections: SortableDirection[] = ["asc", "desc"];

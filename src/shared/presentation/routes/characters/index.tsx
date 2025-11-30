@@ -4,7 +4,7 @@ import z from "zod";
 import {
   characterSortableProperties,
   sortableDirections,
-} from "@app/character/domain/types";
+} from "@app/character/domain/Character";
 import CharacterCounter from "@app/character/presentation/components/CharacterCounter/CharacterCounter";
 import CharacterList from "@app/character/presentation/components/CharacterList/CharacterList";
 import CharacterListControls from "@app/character/presentation/components/CharacterListControls/CharacterListControls";

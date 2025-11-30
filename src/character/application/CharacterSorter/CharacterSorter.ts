@@ -2,7 +2,7 @@ import type { Character } from "@app/character/domain/Character";
 import type {
   CharacterSortableProperties,
   SortableDirection,
-} from "@app/character/domain/types";
+} from "@app/character/domain/Character";
 
 export interface CharacterAlphabeticSorter {
   sortCharactersAlphabetically(options: {

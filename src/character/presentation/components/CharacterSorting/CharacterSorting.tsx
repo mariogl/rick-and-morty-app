@@ -4,7 +4,7 @@ import {
   type CharacterSortableProperties,
   characterSortableProperties,
   type SortableDirection,
-} from "@app/character/domain/types";
+} from "@app/character/domain/Character";
 import useCharacterSort from "@app/character/presentation/hooks/useCharacterSort";
 import Dropdown from "@app/shared/presentation/components/Dropdown/Dropdown";
 

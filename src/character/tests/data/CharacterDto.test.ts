@@ -1,7 +1,8 @@
 import CharacterDto from "@app/character/data/dto/CharacterDto";
 import UnknownGenderCharacterError from "@app/character/domain/errors/UnknownGenderCharacterError";
 import UnknownStatusCharacterError from "@app/character/domain/errors/UnknownStatusCharacterError";
-import type { Gender, Status } from "@app/character/domain/types";
+import type { Gender } from "@app/character/domain/Gender";
+import type { Status } from "@app/character/domain/Status";
 import CharacterMotherObject from "@app/character/tests/domain/CharacterMotherObject";
 
 import CharacterDtoMotherObject from "./CharacterDtoMotherObject";

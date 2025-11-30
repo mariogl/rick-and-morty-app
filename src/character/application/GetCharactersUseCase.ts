@@ -1,10 +1,10 @@
 import type { CharacterAlphabeticSorter } from "@app/character/application/CharacterSorter/CharacterSorter";
 import type { Character } from "@app/character/domain/Character";
-import type { CharacterClient } from "@app/character/domain/CharacterClient";
 import type {
   CharacterSortableProperties,
   SortableDirection,
-} from "@app/character/domain/types";
+} from "@app/character/domain/Character";
+import type { CharacterClient } from "@app/character/domain/CharacterClient";
 
 class GetCharactersUseCase {
   private readonly characterClient: CharacterClient;

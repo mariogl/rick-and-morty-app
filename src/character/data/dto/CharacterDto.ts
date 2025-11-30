@@ -3,7 +3,8 @@ import z from "zod";
 import type { Character } from "@app/character/domain/Character";
 import UnknownGenderCharacterError from "@app/character/domain/errors/UnknownGenderCharacterError";
 import UnknownStatusCharacterError from "@app/character/domain/errors/UnknownStatusCharacterError";
-import { type Gender, type Status } from "@app/character/domain/types";
+import { type Gender } from "@app/character/domain/Gender";
+import { type Status } from "@app/character/domain/Status";
 
 import characterDtoSchema from "./schema";
 import type { CharacterDtoPrimitives } from "./types";
